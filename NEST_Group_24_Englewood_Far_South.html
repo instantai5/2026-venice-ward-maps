@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_359b3c8a95e8a1d7bdd2d0e1c9c6684c {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+    <div style="
+        position: fixed;
+        top: 12px;
+        left: 12px;
+        z-index: 9999;
+        background: white;
+        border: 2px solid #d62728;
+        padding: 10px 12px;
+        font-size: 14px;
+        line-height: 1.35;
+        box-shadow: 2px 2px 6px rgba(0,0,0,0.25);
+        max-width: 320px;
+    ">
+        <div style="font-weight: bold; margin-bottom: 4px;">Group 24: Englewood - Far South</div>
+        <div>Leader: Ken Gestewitz</div>
+        <div>Households: 8</div>
+        <div style="margin-top: 8px;"><a href="index.html">Back to Main Map</a></div>
+    </div>
+    
+    
+            <div class="folium-map" id="map_359b3c8a95e8a1d7bdd2d0e1c9c6684c" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_359b3c8a95e8a1d7bdd2d0e1c9c6684c = L.map(
+                "map_359b3c8a95e8a1d7bdd2d0e1c9c6684c",
+                {
+                    center: [26.9624241, -82.35315952499997],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 15,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_90477e4bd800fc5f677b1d5206781673 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_90477e4bd800fc5f677b1d5206781673.addTo(map_359b3c8a95e8a1d7bdd2d0e1c9c6684c);
+        
+    
+        function geo_json_19dcd6dbddeb218583b27af77810fc99_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "black", "fillColor": "#d62728", "fillOpacity": 0.3, "weight": 1.8};
+            }
+        }
+
+        function geo_json_19dcd6dbddeb218583b27af77810fc99_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_19dcd6dbddeb218583b27af77810fc99 = L.geoJson(null, {
+                onEachFeature: geo_json_19dcd6dbddeb218583b27af77810fc99_onEachFeature,
+            
+                style: geo_json_19dcd6dbddeb218583b27af77810fc99_styler,
+            ...{
+}
+        });
+
+        function geo_json_19dcd6dbddeb218583b27af77810fc99_add (data) {
+            geo_json_19dcd6dbddeb218583b27af77810fc99
+                .addData(data);
+        }
+            geo_json_19dcd6dbddeb218583b27af77810fc99_add({"features": [{"geometry": {"coordinates": [[[-82.3628315999999, 26.9279584], [-82.3667244, 26.9848472], [-82.3106339, 26.9412589], [-82.3628315999999, 26.9279584]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_19dcd6dbddeb218583b27af77810fc99.bindTooltip(
+                `<div>
+                     Group 24: Englewood - Far South
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_19dcd6dbddeb218583b27af77810fc99.addTo(map_359b3c8a95e8a1d7bdd2d0e1c9c6684c);
+        
+    
+            var circle_marker_b77c1219204ec8e5d9e7e0ee328bd533 = L.circleMarker(
+                [26.9728791, -82.3557585],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d62728", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_359b3c8a95e8a1d7bdd2d0e1c9c6684c);
+        
+    
+        var popup_3282d951a4c078860b700b0950974484 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a7afd0f8a3d83ade83fc0b46ef9b72b7 = $(`<div id="html_a7afd0f8a3d83ade83fc0b46ef9b72b7" style="width: 100.0%; height: 100.0%;"><b>Gestewitz, Ken & Tracy</b><br>224 Pine Glen Ct Englewood FL 34223-4044 </div>`)[0];
+                popup_3282d951a4c078860b700b0950974484.setContent(html_a7afd0f8a3d83ade83fc0b46ef9b72b7);
+            
+        
+
+        circle_marker_b77c1219204ec8e5d9e7e0ee328bd533.bindPopup(popup_3282d951a4c078860b700b0950974484)
+        ;
+
+        
+    
+    
+            var circle_marker_0b70993866ddc1166d1cfeb53e24a1f5 = L.circleMarker(
+                [26.9669243, -82.3575645],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d62728", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_359b3c8a95e8a1d7bdd2d0e1c9c6684c);
+        
+    
+        var popup_d301214a6cffea72e280ac3dcb5fb2b4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a469d9106d459a3ea3122aec75c84ad8 = $(`<div id="html_a469d9106d459a3ea3122aec75c84ad8" style="width: 100.0%; height: 100.0%;"><b>Hawkins, Catherine Eileen</b><br>250 N McCall Rd Lt 4 Englewood FL 34223-4071 </div>`)[0];
+                popup_d301214a6cffea72e280ac3dcb5fb2b4.setContent(html_a469d9106d459a3ea3122aec75c84ad8);
+            
+        
+
+        circle_marker_0b70993866ddc1166d1cfeb53e24a1f5.bindPopup(popup_d301214a6cffea72e280ac3dcb5fb2b4)
+        ;
+
+        
+    
+    
+            var circle_marker_33dc2060851d0c12a172637c86b26a14 = L.circleMarker(
+                [26.9412589, -82.3106339],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d62728", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_359b3c8a95e8a1d7bdd2d0e1c9c6684c);
+        
+    
+        var popup_3026a6d4291a465f44bf99e4ad6e5c35 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b6b534732c40367aefd8708cbf51ca17 = $(`<div id="html_b6b534732c40367aefd8708cbf51ca17" style="width: 100.0%; height: 100.0%;"><b>Kibbons, Leona</b><br>6167 Redwing Ave Englewood FL 34224-8136 </div>`)[0];
+                popup_3026a6d4291a465f44bf99e4ad6e5c35.setContent(html_b6b534732c40367aefd8708cbf51ca17);
+            
+        
+
+        circle_marker_33dc2060851d0c12a172637c86b26a14.bindPopup(popup_3026a6d4291a465f44bf99e4ad6e5c35)
+        ;
+
+        
+    
+    
+            var circle_marker_d724d18d2ba6947f822b02b1b178fbda = L.circleMarker(
+                [26.9279584, -82.3628315999999],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d62728", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_359b3c8a95e8a1d7bdd2d0e1c9c6684c);
+        
+    
+        var popup_65cb84fb700429cd0c8256762f2e33e5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d0de9085134623a0f0565199602b5e14 = $(`<div id="html_d0de9085134623a0f0565199602b5e14" style="width: 100.0%; height: 100.0%;"><b>McArthur, Mike & Penny</b><br>23 Cielo St Englewood FL 34223-5720 </div>`)[0];
+                popup_65cb84fb700429cd0c8256762f2e33e5.setContent(html_d0de9085134623a0f0565199602b5e14);
+            
+        
+
+        circle_marker_d724d18d2ba6947f822b02b1b178fbda.bindPopup(popup_65cb84fb700429cd0c8256762f2e33e5)
+        ;
+
+        
+    
+    
+            var circle_marker_f2ee15c2ec3692c1d2c238650accac41 = L.circleMarker(
+                [26.9689339, -82.3605228999999],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d62728", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_359b3c8a95e8a1d7bdd2d0e1c9c6684c);
+        
+    
+        var popup_b915a98e8fcac8061903ca1086988672 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1c745545b5fa561e5b56cf5f1bb36935 = $(`<div id="html_1c745545b5fa561e5b56cf5f1bb36935" style="width: 100.0%; height: 100.0%;"><b>Neff, Benjamin Oren & Julia</b><br>380 Gray Rd Englewood FL 34223-4024 </div>`)[0];
+                popup_b915a98e8fcac8061903ca1086988672.setContent(html_1c745545b5fa561e5b56cf5f1bb36935);
+            
+        
+
+        circle_marker_f2ee15c2ec3692c1d2c238650accac41.bindPopup(popup_b915a98e8fcac8061903ca1086988672)
+        ;
+
+        
+    
+    
+            var circle_marker_13bfedc28a7e6dc7bb90e0c68d5f5ae3 = L.circleMarker(
+                [26.9642268, -82.3554384],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d62728", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_359b3c8a95e8a1d7bdd2d0e1c9c6684c);
+        
+    
+        var popup_21edcef5c7a4311be9ec996544128a5c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_aa24b2a43067df589a74505bc158511d = $(`<div id="html_aa24b2a43067df589a74505bc158511d" style="width: 100.0%; height: 100.0%;"><b>Scott, Daniel Lyons & Mickayla Josie Ann</b><br>122 W Perry Ln Englewood FL 34223-2943 </div>`)[0];
+                popup_21edcef5c7a4311be9ec996544128a5c.setContent(html_aa24b2a43067df589a74505bc158511d);
+            
+        
+
+        circle_marker_13bfedc28a7e6dc7bb90e0c68d5f5ae3.bindPopup(popup_21edcef5c7a4311be9ec996544128a5c)
+        ;
+
+        
+    
+    
+            var circle_marker_fdd758ea10618fbb80078bdc7b8fed45 = L.circleMarker(
+                [26.9723642, -82.355802],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d62728", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_359b3c8a95e8a1d7bdd2d0e1c9c6684c);
+        
+    
+        var popup_ab8dd2c2b385a68269d4b08b81d2eff1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_688916129ac73e236a749fe9c85041c1 = $(`<div id="html_688916129ac73e236a749fe9c85041c1" style="width: 100.0%; height: 100.0%;"><b>Walker, Christopher Todd & Regina Lynn</b><br>209 Pine Glen Ct Englewood FL 34223-4043 </div>`)[0];
+                popup_ab8dd2c2b385a68269d4b08b81d2eff1.setContent(html_688916129ac73e236a749fe9c85041c1);
+            
+        
+
+        circle_marker_fdd758ea10618fbb80078bdc7b8fed45.bindPopup(popup_ab8dd2c2b385a68269d4b08b81d2eff1)
+        ;
+
+        
+    
+    
+            var circle_marker_73080802b55814747408adea4a590da0 = L.circleMarker(
+                [26.9848472, -82.3667244],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d62728", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_359b3c8a95e8a1d7bdd2d0e1c9c6684c);
+        
+    
+        var popup_14798c47568f27203ce3db7837a1178a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8fd484b72c4d8f3fb3a410f8a3a5bea6 = $(`<div id="html_8fd484b72c4d8f3fb3a410f8a3a5bea6" style="width: 100.0%; height: 100.0%;"><b>Wedig, Thomas & Teresa Lynn</b><br>28 Tiffany St Englewood FL 34223-2246 </div>`)[0];
+                popup_14798c47568f27203ce3db7837a1178a.setContent(html_8fd484b72c4d8f3fb3a410f8a3a5bea6);
+            
+        
+
+        circle_marker_73080802b55814747408adea4a590da0.bindPopup(popup_14798c47568f27203ce3db7837a1178a)
+        ;
+
+        
+    
+</script>
+</html>

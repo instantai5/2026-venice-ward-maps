@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_b4a0457d00883e23316ce90d86d52e31 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+    <div style="
+        position: fixed;
+        top: 12px;
+        left: 12px;
+        z-index: 9999;
+        background: white;
+        border: 2px solid #bcbd22;
+        padding: 10px 12px;
+        font-size: 14px;
+        line-height: 1.35;
+        box-shadow: 2px 2px 6px rgba(0,0,0,0.25);
+        max-width: 320px;
+    ">
+        <div style="font-weight: bold; margin-bottom: 4px;">Group 19: Venice South - Airport South</div>
+        <div>Leader: Jim Liard</div>
+        <div>Households: 10</div>
+        <div style="margin-top: 8px;"><a href="index.html">Back to Main Map</a></div>
+    </div>
+    
+    
+            <div class="folium-map" id="map_b4a0457d00883e23316ce90d86d52e31" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_b4a0457d00883e23316ce90d86d52e31 = L.map(
+                "map_b4a0457d00883e23316ce90d86d52e31",
+                {
+                    center: [27.057067949999997, -82.42372534999996],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 15,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_d2f356b0575ea497114ee56272bdd3bc = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_d2f356b0575ea497114ee56272bdd3bc.addTo(map_b4a0457d00883e23316ce90d86d52e31);
+        
+    
+        function geo_json_ff2ac3e82bae34ae38253b163d5d9e20_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "black", "fillColor": "#bcbd22", "fillOpacity": 0.3, "weight": 1.8};
+            }
+        }
+
+        function geo_json_ff2ac3e82bae34ae38253b163d5d9e20_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_ff2ac3e82bae34ae38253b163d5d9e20 = L.geoJson(null, {
+                onEachFeature: geo_json_ff2ac3e82bae34ae38253b163d5d9e20_onEachFeature,
+            
+                style: geo_json_ff2ac3e82bae34ae38253b163d5d9e20_styler,
+            ...{
+}
+        });
+
+        function geo_json_ff2ac3e82bae34ae38253b163d5d9e20_add (data) {
+            geo_json_ff2ac3e82bae34ae38253b163d5d9e20
+                .addData(data);
+        }
+            geo_json_ff2ac3e82bae34ae38253b163d5d9e20_add({"features": [{"geometry": {"coordinates": [[[-82.4207984, 27.0470556], [-82.4306853, 27.0515641], [-82.4294219, 27.0654012], [-82.4250059, 27.0664989], [-82.4192384, 27.0597948], [-82.4170889999999, 27.0566734], [-82.4207984, 27.0470556]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_ff2ac3e82bae34ae38253b163d5d9e20.bindTooltip(
+                `<div>
+                     Group 19: Venice South - Airport South
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_ff2ac3e82bae34ae38253b163d5d9e20.addTo(map_b4a0457d00883e23316ce90d86d52e31);
+        
+    
+            var circle_marker_e6a847cbb7b96fe010067a80b6070b57 = L.circleMarker(
+                [27.0664989, -82.4250059],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#bcbd22", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_b4a0457d00883e23316ce90d86d52e31);
+        
+    
+        var popup_cdbb5f21443e1fba1bb0952f6de99a8e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1e4c1c7808ecc2dddbbc423acf89b250 = $(`<div id="html_1e4c1c7808ecc2dddbbc423acf89b250" style="width: 100.0%; height: 100.0%;"><b>Alford, Richard & Monika</b><br>450 Zephyr Rd Venice FL 34293 </div>`)[0];
+                popup_cdbb5f21443e1fba1bb0952f6de99a8e.setContent(html_1e4c1c7808ecc2dddbbc423acf89b250);
+            
+        
+
+        circle_marker_e6a847cbb7b96fe010067a80b6070b57.bindPopup(popup_cdbb5f21443e1fba1bb0952f6de99a8e)
+        ;
+
+        
+    
+    
+            var circle_marker_d8fa30ca74ea72e892cd768f0728d736 = L.circleMarker(
+                [27.0566734, -82.4170889999999],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#bcbd22", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_b4a0457d00883e23316ce90d86d52e31);
+        
+    
+        var popup_545c1f7b785018ff6a89a8cea72c2b82 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3ac42a0077e7ebacdf51e9af083b29f2 = $(`<div id="html_3ac42a0077e7ebacdf51e9af083b29f2" style="width: 100.0%; height: 100.0%;"><b>Cultura Custard, Graham R. & Marlene Ugay</b><br>3440 Orange Rd Venice FL 34293-4943 </div>`)[0];
+                popup_545c1f7b785018ff6a89a8cea72c2b82.setContent(html_3ac42a0077e7ebacdf51e9af083b29f2);
+            
+        
+
+        circle_marker_d8fa30ca74ea72e892cd768f0728d736.bindPopup(popup_545c1f7b785018ff6a89a8cea72c2b82)
+        ;
+
+        
+    
+    
+            var circle_marker_4a84cfecfcd8e60d161affe73b0af650 = L.circleMarker(
+                [27.0597948, -82.4192384],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#bcbd22", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_b4a0457d00883e23316ce90d86d52e31);
+        
+    
+        var popup_86214da2b81ab9be0929ca33fc152bb4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a1037d8680eacf8ad8a5cdb88c770963 = $(`<div id="html_a1037d8680eacf8ad8a5cdb88c770963" style="width: 100.0%; height: 100.0%;"><b>Farnsworth, Charles Cogan</b><br>380 S Quincy Rd Venice FL 34293-3190 </div>`)[0];
+                popup_86214da2b81ab9be0929ca33fc152bb4.setContent(html_a1037d8680eacf8ad8a5cdb88c770963);
+            
+        
+
+        circle_marker_4a84cfecfcd8e60d161affe73b0af650.bindPopup(popup_86214da2b81ab9be0929ca33fc152bb4)
+        ;
+
+        
+    
+    
+            var circle_marker_dcdd9de98478c0b73bb84c21a01afd52 = L.circleMarker(
+                [27.0515641, -82.4306853],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#bcbd22", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_b4a0457d00883e23316ce90d86d52e31);
+        
+    
+        var popup_3b69c73565dd7fe9a56ec67ad3e2087a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_59235141cc5ea767ab31ee801b223a51 = $(`<div id="html_59235141cc5ea767ab31ee801b223a51" style="width: 100.0%; height: 100.0%;"><b>Font, Luis Alberto & Ruth Elizabeth</b><br>1461 Olympia Rd Venice FL 34293-4804 </div>`)[0];
+                popup_3b69c73565dd7fe9a56ec67ad3e2087a.setContent(html_59235141cc5ea767ab31ee801b223a51);
+            
+        
+
+        circle_marker_dcdd9de98478c0b73bb84c21a01afd52.bindPopup(popup_3b69c73565dd7fe9a56ec67ad3e2087a)
+        ;
+
+        
+    
+    
+            var circle_marker_62d48d9e37740c6390e6d5c0406e1455 = L.circleMarker(
+                [27.0470556, -82.4207984],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#bcbd22", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_b4a0457d00883e23316ce90d86d52e31);
+        
+    
+        var popup_a41c906d408da5013962426a2d450dea = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_936a0bc5369a45e08b039b5fc59aa7af = $(`<div id="html_936a0bc5369a45e08b039b5fc59aa7af" style="width: 100.0%; height: 100.0%;"><b>Gustafson, Rita M., Brian & Mandy Marie</b><br>1042 Linden Rd Venice FL 34293 </div>`)[0];
+                popup_a41c906d408da5013962426a2d450dea.setContent(html_936a0bc5369a45e08b039b5fc59aa7af);
+            
+        
+
+        circle_marker_62d48d9e37740c6390e6d5c0406e1455.bindPopup(popup_a41c906d408da5013962426a2d450dea)
+        ;
+
+        
+    
+    
+            var circle_marker_36853e767b2192bb1ef0b551122348fa = L.circleMarker(
+                [27.0529673, -82.4245902999999],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#bcbd22", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_b4a0457d00883e23316ce90d86d52e31);
+        
+    
+        var popup_4368c3dfc3b60fa5532a355ee7413d9c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_797c4a4d92e0dd8d1e0eb18e7100393b = $(`<div id="html_797c4a4d92e0dd8d1e0eb18e7100393b" style="width: 100.0%; height: 100.0%;"><b>Kononov, Ilya</b><br>1035 indus Road Venice FL 34293 </div>`)[0];
+                popup_4368c3dfc3b60fa5532a355ee7413d9c.setContent(html_797c4a4d92e0dd8d1e0eb18e7100393b);
+            
+        
+
+        circle_marker_36853e767b2192bb1ef0b551122348fa.bindPopup(popup_4368c3dfc3b60fa5532a355ee7413d9c)
+        ;
+
+        
+    
+    
+            var circle_marker_098b4165326bb2c2c0a575ae80873f63 = L.circleMarker(
+                [27.0607473, -82.4211012],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#bcbd22", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_b4a0457d00883e23316ce90d86d52e31);
+        
+    
+        var popup_90eb39ba51c6186b1897d8366fa91fbf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e5cf4655762917354d46e97a3b363fc2 = $(`<div id="html_e5cf4655762917354d46e97a3b363fc2" style="width: 100.0%; height: 100.0%;"><b>Nickel, Ryan & Taylor</b><br>445 Grant Rd Venice FL 34293-3149 </div>`)[0];
+                popup_90eb39ba51c6186b1897d8366fa91fbf.setContent(html_e5cf4655762917354d46e97a3b363fc2);
+            
+        
+
+        circle_marker_098b4165326bb2c2c0a575ae80873f63.bindPopup(popup_90eb39ba51c6186b1897d8366fa91fbf)
+        ;
+
+        
+    
+    
+            var circle_marker_79462c1cdfde91f01fe8f78b920f6d88 = L.circleMarker(
+                [27.050487, -82.4275238],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#bcbd22", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_b4a0457d00883e23316ce90d86d52e31);
+        
+    
+        var popup_7428fae033ba17c902d1f339e0f75894 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fcc6f9e4cad1d263e27da3190105ef6c = $(`<div id="html_fcc6f9e4cad1d263e27da3190105ef6c" style="width: 100.0%; height: 100.0%;"><b>Powers, William</b><br>1312 Jamaica Rd Venice FL 34293-5423 </div>`)[0];
+                popup_7428fae033ba17c902d1f339e0f75894.setContent(html_fcc6f9e4cad1d263e27da3190105ef6c);
+            
+        
+
+        circle_marker_79462c1cdfde91f01fe8f78b920f6d88.bindPopup(popup_7428fae033ba17c902d1f339e0f75894)
+        ;
+
+        
+    
+    
+            var circle_marker_271f3c6d8eb705b793fdeb5078725045 = L.circleMarker(
+                [27.0654012, -82.4294219],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#bcbd22", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_b4a0457d00883e23316ce90d86d52e31);
+        
+    
+        var popup_60b259b15f043f2f6ec9be84bffc1999 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bbaf88bc455499b0cd5b600b8a4aea97 = $(`<div id="html_bbaf88bc455499b0cd5b600b8a4aea97" style="width: 100.0%; height: 100.0%;"><b>Roberts, Debra Lynn</b><br>2710 Shamrock Dr Venice FL 34293-2919 </div>`)[0];
+                popup_60b259b15f043f2f6ec9be84bffc1999.setContent(html_bbaf88bc455499b0cd5b600b8a4aea97);
+            
+        
+
+        circle_marker_271f3c6d8eb705b793fdeb5078725045.bindPopup(popup_60b259b15f043f2f6ec9be84bffc1999)
+        ;
+
+        
+    
+    
+            var circle_marker_8b3ea5be771bc1aa446c9a3a1f656b8b = L.circleMarker(
+                [27.0594899, -82.4217992999999],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#bcbd22", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_b4a0457d00883e23316ce90d86d52e31);
+        
+    
+        var popup_36e1005e2c354e5f043e31184f66a694 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_757cbc63a330a791d66c0d05d828a263 = $(`<div id="html_757cbc63a330a791d66c0d05d828a263" style="width: 100.0%; height: 100.0%;"><b>Washkill, Allison</b><br>555 Burke Rd Venice FL 34293-3179 </div>`)[0];
+                popup_36e1005e2c354e5f043e31184f66a694.setContent(html_757cbc63a330a791d66c0d05d828a263);
+            
+        
+
+        circle_marker_8b3ea5be771bc1aa446c9a3a1f656b8b.bindPopup(popup_36e1005e2c354e5f043e31184f66a694)
+        ;
+
+        
+    
+</script>
+</html>

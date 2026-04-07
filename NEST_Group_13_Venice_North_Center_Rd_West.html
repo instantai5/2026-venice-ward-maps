@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_5ca1a68d20daeda78cabc9d6c0c22201 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+    <div style="
+        position: fixed;
+        top: 12px;
+        left: 12px;
+        z-index: 9999;
+        background: white;
+        border: 2px solid #2ca02c;
+        padding: 10px 12px;
+        font-size: 14px;
+        line-height: 1.35;
+        box-shadow: 2px 2px 6px rgba(0,0,0,0.25);
+        max-width: 320px;
+    ">
+        <div style="font-weight: bold; margin-bottom: 4px;">Group 13: Venice North - Center Rd West</div>
+        <div>Leader: Dan Cooper</div>
+        <div>Households: 7</div>
+        <div style="margin-top: 8px;"><a href="index.html">Back to Main Map</a></div>
+    </div>
+    
+    
+            <div class="folium-map" id="map_5ca1a68d20daeda78cabc9d6c0c22201" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_5ca1a68d20daeda78cabc9d6c0c22201 = L.map(
+                "map_5ca1a68d20daeda78cabc9d6c0c22201",
+                {
+                    center: [27.086440914285713, -82.35386517142852],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 15,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_5522082f209ab2525fd8e13b69095d71 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_5522082f209ab2525fd8e13b69095d71.addTo(map_5ca1a68d20daeda78cabc9d6c0c22201);
+        
+    
+        function geo_json_15e1ff024a3b15435045a2c68f62d8be_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "black", "fillColor": "#2ca02c", "fillOpacity": 0.3, "weight": 1.8};
+            }
+        }
+
+        function geo_json_15e1ff024a3b15435045a2c68f62d8be_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_15e1ff024a3b15435045a2c68f62d8be = L.geoJson(null, {
+                onEachFeature: geo_json_15e1ff024a3b15435045a2c68f62d8be_onEachFeature,
+            
+                style: geo_json_15e1ff024a3b15435045a2c68f62d8be_styler,
+            ...{
+}
+        });
+
+        function geo_json_15e1ff024a3b15435045a2c68f62d8be_add (data) {
+            geo_json_15e1ff024a3b15435045a2c68f62d8be
+                .addData(data);
+        }
+            geo_json_15e1ff024a3b15435045a2c68f62d8be_add({"features": [{"geometry": {"coordinates": [[[-82.3493838, 27.0798999], [-82.3733314999999, 27.0851211], [-82.3720344, 27.087653], [-82.3463812999999, 27.1001234], [-82.3354801999999, 27.0827485], [-82.3493838, 27.0798999]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_15e1ff024a3b15435045a2c68f62d8be.bindTooltip(
+                `<div>
+                     Group 13: Venice North - Center Rd West
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_15e1ff024a3b15435045a2c68f62d8be.addTo(map_5ca1a68d20daeda78cabc9d6c0c22201);
+        
+    
+            var circle_marker_b1c41b9d70967dfddd24d4c15de98a49 = L.circleMarker(
+                [27.0855265, -82.350264],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ca02c", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_5ca1a68d20daeda78cabc9d6c0c22201);
+        
+    
+        var popup_d55b2857a56005492a54b32df81fbfd1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f69d52613842ec1ae3d7499aaad14b2a = $(`<div id="html_f69d52613842ec1ae3d7499aaad14b2a" style="width: 100.0%; height: 100.0%;"><b>Cooper, Dan & Jeanne Marie</b><br>11501 Dancing River Dr Venice FL 34292-4162 </div>`)[0];
+                popup_d55b2857a56005492a54b32df81fbfd1.setContent(html_f69d52613842ec1ae3d7499aaad14b2a);
+            
+        
+
+        circle_marker_b1c41b9d70967dfddd24d4c15de98a49.bindPopup(popup_d55b2857a56005492a54b32df81fbfd1)
+        ;
+
+        
+    
+    
+            var circle_marker_939c9d4db3988b2c783182b9868d6706 = L.circleMarker(
+                [27.087653, -82.3720344],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ca02c", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_5ca1a68d20daeda78cabc9d6c0c22201);
+        
+    
+        var popup_8acc826a398681e055fa3ea4a19a35c9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f776b737aa5323746b4ed1ef429cf039 = $(`<div id="html_f776b737aa5323746b4ed1ef429cf039" style="width: 100.0%; height: 100.0%;"><b>Davis, Matthew Allen & Christine Elizabeth</b><br>306 Venice Golf Club Dr Venice FL 34292-3175 </div>`)[0];
+                popup_8acc826a398681e055fa3ea4a19a35c9.setContent(html_f776b737aa5323746b4ed1ef429cf039);
+            
+        
+
+        circle_marker_939c9d4db3988b2c783182b9868d6706.bindPopup(popup_8acc826a398681e055fa3ea4a19a35c9)
+        ;
+
+        
+    
+    
+            var circle_marker_baa4b220272e721ab66d405053618ba7 = L.circleMarker(
+                [27.0851211, -82.3733314999999],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ca02c", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_5ca1a68d20daeda78cabc9d6c0c22201);
+        
+    
+        var popup_e98811d78dc6578276d73951ed2810cf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ba047b4aaaf774658bca37e18ff055f0 = $(`<div id="html_ba047b4aaaf774658bca37e18ff055f0" style="width: 100.0%; height: 100.0%;"><b>MacConel, James & Danielle Elyce</b><br>283 Venice Golf Club Dr Venice FL 34292-3148 </div>`)[0];
+                popup_e98811d78dc6578276d73951ed2810cf.setContent(html_ba047b4aaaf774658bca37e18ff055f0);
+            
+        
+
+        circle_marker_baa4b220272e721ab66d405053618ba7.bindPopup(popup_e98811d78dc6578276d73951ed2810cf)
+        ;
+
+        
+    
+    
+            var circle_marker_7b8efd8164a24e442f9c51d6a9a31d00 = L.circleMarker(
+                [27.0798999, -82.3493838],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ca02c", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_5ca1a68d20daeda78cabc9d6c0c22201);
+        
+    
+        var popup_5ec2290cb6057b497a3a9a66edec7c88 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_108bff698239f118f1969d1fb95bc481 = $(`<div id="html_108bff698239f118f1969d1fb95bc481" style="width: 100.0%; height: 100.0%;"><b>McAllister, Lloyd & Eileen</b><br>2379 Caraway Dr Venice FL 34292-4174 </div>`)[0];
+                popup_5ec2290cb6057b497a3a9a66edec7c88.setContent(html_108bff698239f118f1969d1fb95bc481);
+            
+        
+
+        circle_marker_7b8efd8164a24e442f9c51d6a9a31d00.bindPopup(popup_5ec2290cb6057b497a3a9a66edec7c88)
+        ;
+
+        
+    
+    
+            var circle_marker_5067902df8ed9c2a491d0f8753d09e6b = L.circleMarker(
+                [27.084014, -82.3501809999999],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ca02c", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_5ca1a68d20daeda78cabc9d6c0c22201);
+        
+    
+        var popup_6f23e7c875013ee61d43301b2406762a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4996958b8fd0c3a09000ddb7f5c9c531 = $(`<div id="html_4996958b8fd0c3a09000ddb7f5c9c531" style="width: 100.0%; height: 100.0%;"><b>Richey, Robert Lee & Debra</b><br>11489 Tinder Ct Venice FL 34292-4129 </div>`)[0];
+                popup_6f23e7c875013ee61d43301b2406762a.setContent(html_4996958b8fd0c3a09000ddb7f5c9c531);
+            
+        
+
+        circle_marker_5067902df8ed9c2a491d0f8753d09e6b.bindPopup(popup_6f23e7c875013ee61d43301b2406762a)
+        ;
+
+        
+    
+    
+            var circle_marker_b38c0510cacee06b662f7b5d7bd7c03e = L.circleMarker(
+                [27.1001234, -82.3463812999999],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ca02c", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_5ca1a68d20daeda78cabc9d6c0c22201);
+        
+    
+        var popup_f16ea6c2b0c46ad32b8db6f137eceff3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_70b1e693929b7a172b72201ad972dbcc = $(`<div id="html_70b1e693929b7a172b72201ad972dbcc" style="width: 100.0%; height: 100.0%;"><b>Tecklenburg, Linda</b><br>11586 Blackfin St Venice FL 34292-1752 </div>`)[0];
+                popup_f16ea6c2b0c46ad32b8db6f137eceff3.setContent(html_70b1e693929b7a172b72201ad972dbcc);
+            
+        
+
+        circle_marker_b38c0510cacee06b662f7b5d7bd7c03e.bindPopup(popup_f16ea6c2b0c46ad32b8db6f137eceff3)
+        ;
+
+        
+    
+    
+            var circle_marker_2862c140b90f0107c710d03048c76d38 = L.circleMarker(
+                [27.0827485, -82.3354801999999],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ca02c", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_5ca1a68d20daeda78cabc9d6c0c22201);
+        
+    
+        var popup_c8bbd0ed30f2be690d4bab408192b7fb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2b0bd00dbc4e7bede4b1840239341457 = $(`<div id="html_2b0bd00dbc4e7bede4b1840239341457" style="width: 100.0%; height: 100.0%;"><b>Timm, Paul & Sheron</b><br>12360 Destiny Dr Venice FL 34292-3816 </div>`)[0];
+                popup_c8bbd0ed30f2be690d4bab408192b7fb.setContent(html_2b0bd00dbc4e7bede4b1840239341457);
+            
+        
+
+        circle_marker_2862c140b90f0107c710d03048c76d38.bindPopup(popup_c8bbd0ed30f2be690d4bab408192b7fb)
+        ;
+
+        
+    
+</script>
+</html>

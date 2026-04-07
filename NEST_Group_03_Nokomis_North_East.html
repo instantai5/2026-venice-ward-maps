@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_cc4d08fddc4d619bae4d814ea1c39656 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+    <div style="
+        position: fixed;
+        top: 12px;
+        left: 12px;
+        z-index: 9999;
+        background: white;
+        border: 2px solid #2ca02c;
+        padding: 10px 12px;
+        font-size: 14px;
+        line-height: 1.35;
+        box-shadow: 2px 2px 6px rgba(0,0,0,0.25);
+        max-width: 320px;
+    ">
+        <div style="font-weight: bold; margin-bottom: 4px;">Group 3: Nokomis - North East</div>
+        <div>Leader: Kristian Arzaga</div>
+        <div>Households: 8</div>
+        <div style="margin-top: 8px;"><a href="index.html">Back to Main Map</a></div>
+    </div>
+    
+    
+            <div class="folium-map" id="map_cc4d08fddc4d619bae4d814ea1c39656" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_cc4d08fddc4d619bae4d814ea1c39656 = L.map(
+                "map_cc4d08fddc4d619bae4d814ea1c39656",
+                {
+                    center: [27.1599086625, -82.42647634999997],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 15,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_21b211694acbedb8abff83edfc5c0746 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_21b211694acbedb8abff83edfc5c0746.addTo(map_cc4d08fddc4d619bae4d814ea1c39656);
+        
+    
+        function geo_json_9a7697b93c978ff53c4de46cec0d1a74_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "black", "fillColor": "#2ca02c", "fillOpacity": 0.3, "weight": 1.8};
+            }
+        }
+
+        function geo_json_9a7697b93c978ff53c4de46cec0d1a74_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_9a7697b93c978ff53c4de46cec0d1a74 = L.geoJson(null, {
+                onEachFeature: geo_json_9a7697b93c978ff53c4de46cec0d1a74_onEachFeature,
+            
+                style: geo_json_9a7697b93c978ff53c4de46cec0d1a74_styler,
+            ...{
+}
+        });
+
+        function geo_json_9a7697b93c978ff53c4de46cec0d1a74_add (data) {
+            geo_json_9a7697b93c978ff53c4de46cec0d1a74
+                .addData(data);
+        }
+            geo_json_9a7697b93c978ff53c4de46cec0d1a74_add({"features": [{"geometry": {"coordinates": [[[-82.4379178, 27.1544758], [-82.4412322, 27.1554592], [-82.4391479, 27.1736603], [-82.4034698, 27.1589507], [-82.4379178, 27.1544758]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_9a7697b93c978ff53c4de46cec0d1a74.bindTooltip(
+                `<div>
+                     Group 3: Nokomis - North East
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_9a7697b93c978ff53c4de46cec0d1a74.addTo(map_cc4d08fddc4d619bae4d814ea1c39656);
+        
+    
+            var circle_marker_e4fb5470c64e15e979401ec82d58a36d = L.circleMarker(
+                [27.1736603, -82.4391479],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ca02c", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_cc4d08fddc4d619bae4d814ea1c39656);
+        
+    
+        var popup_1dfe08a5ddfd86ef2256022993446e88 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_032ec986cb0439fdf32fb127197c5bd3 = $(`<div id="html_032ec986cb0439fdf32fb127197c5bd3" style="width: 100.0%; height: 100.0%;"><b>Albrecht III, Wilbur</b><br>6329 Winding Pine Dr Nokomis FL 34275-4360 </div>`)[0];
+                popup_1dfe08a5ddfd86ef2256022993446e88.setContent(html_032ec986cb0439fdf32fb127197c5bd3);
+            
+        
+
+        circle_marker_e4fb5470c64e15e979401ec82d58a36d.bindPopup(popup_1dfe08a5ddfd86ef2256022993446e88)
+        ;
+
+        
+    
+    
+            var circle_marker_a43de82c6232a0d3b510bcbb6964ecf5 = L.circleMarker(
+                [27.1590683, -82.4251204999999],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ca02c", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_cc4d08fddc4d619bae4d814ea1c39656);
+        
+    
+        var popup_1889538c2e42853330ab452f230b3d15 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a8ed4147dd7c53f950ee17e075827567 = $(`<div id="html_a8ed4147dd7c53f950ee17e075827567" style="width: 100.0%; height: 100.0%;"><b>Arzaga, Kristian & Joice</b><br>1732 Ranch Rd Nokomis FL 34275-2089 </div>`)[0];
+                popup_1889538c2e42853330ab452f230b3d15.setContent(html_a8ed4147dd7c53f950ee17e075827567);
+            
+        
+
+        circle_marker_a43de82c6232a0d3b510bcbb6964ecf5.bindPopup(popup_1889538c2e42853330ab452f230b3d15)
+        ;
+
+        
+    
+    
+            var circle_marker_0876d5da7f1b3e50060ed6501fb650d6 = L.circleMarker(
+                [27.15855, -82.416139],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ca02c", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_cc4d08fddc4d619bae4d814ea1c39656);
+        
+    
+        var popup_9d9547836571fab35e0d617cd94f6e88 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e912e1e3daaadac23335b26b6d6e7224 = $(`<div id="html_e912e1e3daaadac23335b26b6d6e7224" style="width: 100.0%; height: 100.0%;"><b>Harvey, Jared & Jaden</b><br>140 Holly Bank Ave Nokomis FL 34275-3782 </div>`)[0];
+                popup_9d9547836571fab35e0d617cd94f6e88.setContent(html_e912e1e3daaadac23335b26b6d6e7224);
+            
+        
+
+        circle_marker_0876d5da7f1b3e50060ed6501fb650d6.bindPopup(popup_9d9547836571fab35e0d617cd94f6e88)
+        ;
+
+        
+    
+    
+            var circle_marker_c87ba4a748a76de654d76e13abcab24c = L.circleMarker(
+                [27.162807, -82.4222719999999],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ca02c", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_cc4d08fddc4d619bae4d814ea1c39656);
+        
+    
+        var popup_3d718eb5156854b302e0589e011acfe6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7f7c05549670f11f4d92a122233b8cc0 = $(`<div id="html_7f7c05549670f11f4d92a122233b8cc0" style="width: 100.0%; height: 100.0%;"><b>Martin, Diana</b><br>129 Lazy Shore Dr Nokomis FL 34275-3768 </div>`)[0];
+                popup_3d718eb5156854b302e0589e011acfe6.setContent(html_7f7c05549670f11f4d92a122233b8cc0);
+            
+        
+
+        circle_marker_c87ba4a748a76de654d76e13abcab24c.bindPopup(popup_3d718eb5156854b302e0589e011acfe6)
+        ;
+
+        
+    
+    
+            var circle_marker_176cad7adc7bbc9639b43a14ba99f6bf = L.circleMarker(
+                [27.1554592, -82.4412322],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ca02c", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_cc4d08fddc4d619bae4d814ea1c39656);
+        
+    
+        var popup_7ad5cb2c071edbaa0bc81984ef7922b1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ed5f5540b3250878e7671c6090d615f5 = $(`<div id="html_ed5f5540b3250878e7671c6090d615f5" style="width: 100.0%; height: 100.0%;"><b>McKinney, Jarom M. & Anna Maria</b><br>2000 Mission Valley Blvd Nokomis FL 34275-1714 </div>`)[0];
+                popup_7ad5cb2c071edbaa0bc81984ef7922b1.setContent(html_ed5f5540b3250878e7671c6090d615f5);
+            
+        
+
+        circle_marker_176cad7adc7bbc9639b43a14ba99f6bf.bindPopup(popup_7ad5cb2c071edbaa0bc81984ef7922b1)
+        ;
+
+        
+    
+    
+            var circle_marker_39353334a2940c3da9e70396dd3227b5 = L.circleMarker(
+                [27.1589507, -82.4034698],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ca02c", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_cc4d08fddc4d619bae4d814ea1c39656);
+        
+    
+        var popup_885ac4b9b0b3257a4a6882ab43be9079 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_365227ba1990258d8a4b3adab4cce82a = $(`<div id="html_365227ba1990258d8a4b3adab4cce82a" style="width: 100.0%; height: 100.0%;"><b>Pattison, Susan Beth</b><br>3580 Rustic Road Nokomis FL 34275 </div>`)[0];
+                popup_885ac4b9b0b3257a4a6882ab43be9079.setContent(html_365227ba1990258d8a4b3adab4cce82a);
+            
+        
+
+        circle_marker_39353334a2940c3da9e70396dd3227b5.bindPopup(popup_885ac4b9b0b3257a4a6882ab43be9079)
+        ;
+
+        
+    
+    
+            var circle_marker_762906e2318e23f637fd36b22cdbe082 = L.circleMarker(
+                [27.156298, -82.4265116],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ca02c", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_cc4d08fddc4d619bae4d814ea1c39656);
+        
+    
+        var popup_65ab8d3805ccdbe78265eac3ae1b994a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_068eae690c8e75b975c1fc35ea8d069c = $(`<div id="html_068eae690c8e75b975c1fc35ea8d069c" style="width: 100.0%; height: 100.0%;"><b>Saunders, Scott</b><br>1716 Ranch Rd Apt 214 Nokomis FL 34275-1798 </div>`)[0];
+                popup_65ab8d3805ccdbe78265eac3ae1b994a.setContent(html_068eae690c8e75b975c1fc35ea8d069c);
+            
+        
+
+        circle_marker_762906e2318e23f637fd36b22cdbe082.bindPopup(popup_65ab8d3805ccdbe78265eac3ae1b994a)
+        ;
+
+        
+    
+    
+            var circle_marker_78c66086f558b714159fa34700ee7fc3 = L.circleMarker(
+                [27.1544758, -82.4379178],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ca02c", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_cc4d08fddc4d619bae4d814ea1c39656);
+        
+    
+        var popup_7590df81ee29460a00a6319cd2adc89e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_234eee1abe31678c4ab5a20ca0b4fb4e = $(`<div id="html_234eee1abe31678c4ab5a20ca0b4fb4e" style="width: 100.0%; height: 100.0%;"><b>Strong, Leona Fletcher</b><br>1351 MUSTANG ST NOKOMIS FL 34275-1748 </div>`)[0];
+                popup_7590df81ee29460a00a6319cd2adc89e.setContent(html_234eee1abe31678c4ab5a20ca0b4fb4e);
+            
+        
+
+        circle_marker_78c66086f558b714159fa34700ee7fc3.bindPopup(popup_7590df81ee29460a00a6319cd2adc89e)
+        ;
+
+        
+    
+</script>
+</html>

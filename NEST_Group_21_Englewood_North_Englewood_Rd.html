@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_ba65ddd90ced13503659ca55ec01ec5f {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+    <div style="
+        position: fixed;
+        top: 12px;
+        left: 12px;
+        z-index: 9999;
+        background: white;
+        border: 2px solid #1f77b4;
+        padding: 10px 12px;
+        font-size: 14px;
+        line-height: 1.35;
+        box-shadow: 2px 2px 6px rgba(0,0,0,0.25);
+        max-width: 320px;
+    ">
+        <div style="font-weight: bold; margin-bottom: 4px;">Group 21: Englewood - North Englewood Rd</div>
+        <div>Leader: Parker May</div>
+        <div>Households: 11</div>
+        <div style="margin-top: 8px;"><a href="index.html">Back to Main Map</a></div>
+    </div>
+    
+    
+            <div class="folium-map" id="map_ba65ddd90ced13503659ca55ec01ec5f" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_ba65ddd90ced13503659ca55ec01ec5f = L.map(
+                "map_ba65ddd90ced13503659ca55ec01ec5f",
+                {
+                    center: [27.042572227272725, -82.41238669999997],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 15,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_5076202741144d33952d924c24d3efca = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_5076202741144d33952d924c24d3efca.addTo(map_ba65ddd90ced13503659ca55ec01ec5f);
+        
+    
+        function geo_json_123643d3ba28c81044ed21bd630fb448_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "black", "fillColor": "#1f77b4", "fillOpacity": 0.3, "weight": 1.8};
+            }
+        }
+
+        function geo_json_123643d3ba28c81044ed21bd630fb448_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_123643d3ba28c81044ed21bd630fb448 = L.geoJson(null, {
+                onEachFeature: geo_json_123643d3ba28c81044ed21bd630fb448_onEachFeature,
+            
+                style: geo_json_123643d3ba28c81044ed21bd630fb448_styler,
+            ...{
+}
+        });
+
+        function geo_json_123643d3ba28c81044ed21bd630fb448_add (data) {
+            geo_json_123643d3ba28c81044ed21bd630fb448
+                .addData(data);
+        }
+            geo_json_123643d3ba28c81044ed21bd630fb448_add({"features": [{"geometry": {"coordinates": [[[-82.4176353, 27.0369279], [-82.4200166999999, 27.03912], [-82.4201769, 27.0425884], [-82.4176698, 27.0441772], [-82.4144939999999, 27.0460986], [-82.4107918, 27.0473556], [-82.4071517, 27.0473018], [-82.4029472, 27.0419205], [-82.4033117, 27.0412276], [-82.4176353, 27.0369279]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_123643d3ba28c81044ed21bd630fb448.bindTooltip(
+                `<div>
+                     Group 21: Englewood - North Englewood Rd
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_123643d3ba28c81044ed21bd630fb448.addTo(map_ba65ddd90ced13503659ca55ec01ec5f);
+        
+    
+            var circle_marker_26fd030a83b5cd9ffac684d7c90e75a3 = L.circleMarker(
+                [27.0441772, -82.4176698],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1f77b4", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_ba65ddd90ced13503659ca55ec01ec5f);
+        
+    
+        var popup_cc667de730c82fad6824ae842d031c69 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6e438eaeebb34d8ca0b0c114522ef6f9 = $(`<div id="html_6e438eaeebb34d8ca0b0c114522ef6f9" style="width: 100.0%; height: 100.0%;"><b>Bouffard, David & Amy</b><br>4447 Meridian Rd Venice FL 34293-6132 </div>`)[0];
+                popup_cc667de730c82fad6824ae842d031c69.setContent(html_6e438eaeebb34d8ca0b0c114522ef6f9);
+            
+        
+
+        circle_marker_26fd030a83b5cd9ffac684d7c90e75a3.bindPopup(popup_cc667de730c82fad6824ae842d031c69)
+        ;
+
+        
+    
+    
+            var circle_marker_4e8aa95aad23591f01155fd401ece499 = L.circleMarker(
+                [27.0419205, -82.4029472],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1f77b4", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_ba65ddd90ced13503659ca55ec01ec5f);
+        
+    
+        var popup_6d59298c53b17d5a609a9f2c4eb1358b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0b38157e5453f058c1d2befb2144a4bb = $(`<div id="html_0b38157e5453f058c1d2befb2144a4bb" style="width: 100.0%; height: 100.0%;"><b>Cosenza, Leo</b><br>109 Coral Rd Venice FL 34283 </div>`)[0];
+                popup_6d59298c53b17d5a609a9f2c4eb1358b.setContent(html_0b38157e5453f058c1d2befb2144a4bb);
+            
+        
+
+        circle_marker_4e8aa95aad23591f01155fd401ece499.bindPopup(popup_6d59298c53b17d5a609a9f2c4eb1358b)
+        ;
+
+        
+    
+    
+            var circle_marker_068cbd19498c7481cc0fcad202fab4e1 = L.circleMarker(
+                [27.0473556, -82.4107918],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1f77b4", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_ba65ddd90ced13503659ca55ec01ec5f);
+        
+    
+        var popup_204255e5f816bfcd04e18d5f56690ac1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b4526cbd71bbc4d6f7bc25bd7e4952b5 = $(`<div id="html_b4526cbd71bbc4d6f7bc25bd7e4952b5" style="width: 100.0%; height: 100.0%;"><b>Demarree, Melinda Adella</b><br>370 Porpoise Rd Venice FL 34293-5826 </div>`)[0];
+                popup_204255e5f816bfcd04e18d5f56690ac1.setContent(html_b4526cbd71bbc4d6f7bc25bd7e4952b5);
+            
+        
+
+        circle_marker_068cbd19498c7481cc0fcad202fab4e1.bindPopup(popup_204255e5f816bfcd04e18d5f56690ac1)
+        ;
+
+        
+    
+    
+            var circle_marker_d26d55e330e130e4f27d18a949aa415b = L.circleMarker(
+                [27.0406944, -82.4068984],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1f77b4", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_ba65ddd90ced13503659ca55ec01ec5f);
+        
+    
+        var popup_7cdf458d686447e14d620a81d3aa3148 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_aa6bf18e5bb2c541fe4a5bcdd967eda2 = $(`<div id="html_aa6bf18e5bb2c541fe4a5bcdd967eda2" style="width: 100.0%; height: 100.0%;"><b>Dooley, Melissa J.</b><br>4732 Pompano Rd Venice FL 34293-7841 </div>`)[0];
+                popup_7cdf458d686447e14d620a81d3aa3148.setContent(html_aa6bf18e5bb2c541fe4a5bcdd967eda2);
+            
+        
+
+        circle_marker_d26d55e330e130e4f27d18a949aa415b.bindPopup(popup_7cdf458d686447e14d620a81d3aa3148)
+        ;
+
+        
+    
+    
+            var circle_marker_fd2f2f1f62f61819ca4adeed54468082 = L.circleMarker(
+                [27.0460986, -82.4144939999999],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1f77b4", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_ba65ddd90ced13503659ca55ec01ec5f);
+        
+    
+        var popup_774c9f84da305d5bbef02aecc20796b0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_12034b1da0ba6117e356eb708042cdad = $(`<div id="html_12034b1da0ba6117e356eb708042cdad" style="width: 100.0%; height: 100.0%;"><b>Epeards, Russell M & Lorraine</b><br>680 Treasure Rd Venice FL 34293 </div>`)[0];
+                popup_774c9f84da305d5bbef02aecc20796b0.setContent(html_12034b1da0ba6117e356eb708042cdad);
+            
+        
+
+        circle_marker_fd2f2f1f62f61819ca4adeed54468082.bindPopup(popup_774c9f84da305d5bbef02aecc20796b0)
+        ;
+
+        
+    
+    
+            var circle_marker_8e776a6057c22c57d829ec338b566fc4 = L.circleMarker(
+                [27.0473018, -82.4071517],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1f77b4", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_ba65ddd90ced13503659ca55ec01ec5f);
+        
+    
+        var popup_083d01069e2533e206953c4ad43ca4ca = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_777f23943e928547997f4058daf139b5 = $(`<div id="html_777f23943e928547997f4058daf139b5" style="width: 100.0%; height: 100.0%;"><b>Exline, Anthony & Casarah</b><br>151 Southland Rd Venice FL 34293-5884 </div>`)[0];
+                popup_083d01069e2533e206953c4ad43ca4ca.setContent(html_777f23943e928547997f4058daf139b5);
+            
+        
+
+        circle_marker_8e776a6057c22c57d829ec338b566fc4.bindPopup(popup_083d01069e2533e206953c4ad43ca4ca)
+        ;
+
+        
+    
+    
+            var circle_marker_d64e220bfc141aa9789a1deb74925eab = L.circleMarker(
+                [27.03912, -82.4200166999999],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1f77b4", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_ba65ddd90ced13503659ca55ec01ec5f);
+        
+    
+        var popup_ff9818e87da8abd4d354bd51701371c8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b003fc1ee5e004561999b29ea1897e24 = $(`<div id="html_b003fc1ee5e004561999b29ea1897e24" style="width: 100.0%; height: 100.0%;"><b>May, Parker Pratley & Channelle</b><br>1350 Southland Rd Venice FL 34293-7712 </div>`)[0];
+                popup_ff9818e87da8abd4d354bd51701371c8.setContent(html_b003fc1ee5e004561999b29ea1897e24);
+            
+        
+
+        circle_marker_d64e220bfc141aa9789a1deb74925eab.bindPopup(popup_ff9818e87da8abd4d354bd51701371c8)
+        ;
+
+        
+    
+    
+            var circle_marker_60049ff9bcf807639ed98fa8ae90233c = L.circleMarker(
+                [27.0412276, -82.4033117],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1f77b4", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_ba65ddd90ced13503659ca55ec01ec5f);
+        
+    
+        var popup_5c32546225b93914b9835d140abb8210 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_388905643fab9f7910ee8b439d525adb = $(`<div id="html_388905643fab9f7910ee8b439d525adb" style="width: 100.0%; height: 100.0%;"><b>Metzger, Joseph Anthony & Krista</b><br>155 Shell Rd Venice FL 34293-7807 </div>`)[0];
+                popup_5c32546225b93914b9835d140abb8210.setContent(html_388905643fab9f7910ee8b439d525adb);
+            
+        
+
+        circle_marker_60049ff9bcf807639ed98fa8ae90233c.bindPopup(popup_5c32546225b93914b9835d140abb8210)
+        ;
+
+        
+    
+    
+            var circle_marker_633df0cf979accac05f44b0a204a2991 = L.circleMarker(
+                [27.0369279, -82.4176353],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1f77b4", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_ba65ddd90ced13503659ca55ec01ec5f);
+        
+    
+        var popup_9c1433f626e687c5ad95df004b7aed47 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9ef26bf9cf2cd017319bee466ef8a0ad = $(`<div id="html_9ef26bf9cf2cd017319bee466ef8a0ad" style="width: 100.0%; height: 100.0%;"><b>Nicholson, Nicholas</b><br>1708 Palmetto Dr Venice FL 34293 </div>`)[0];
+                popup_9c1433f626e687c5ad95df004b7aed47.setContent(html_9ef26bf9cf2cd017319bee466ef8a0ad);
+            
+        
+
+        circle_marker_633df0cf979accac05f44b0a204a2991.bindPopup(popup_9c1433f626e687c5ad95df004b7aed47)
+        ;
+
+        
+    
+    
+            var circle_marker_3004ee4c84cd980b55080fb0c8a9ddb7 = L.circleMarker(
+                [27.0408825, -82.4151602],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1f77b4", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_ba65ddd90ced13503659ca55ec01ec5f);
+        
+    
+        var popup_3f383c86d3511ccc7f5a0abf771a4ab0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dcb6f5f7a818d16e25820022d29b0440 = $(`<div id="html_dcb6f5f7a818d16e25820022d29b0440" style="width: 100.0%; height: 100.0%;"><b>Sanchez, Robert Arthur</b><br>950 Poinciana Rd Venice FL 34293-6249 </div>`)[0];
+                popup_3f383c86d3511ccc7f5a0abf771a4ab0.setContent(html_dcb6f5f7a818d16e25820022d29b0440);
+            
+        
+
+        circle_marker_3004ee4c84cd980b55080fb0c8a9ddb7.bindPopup(popup_3f383c86d3511ccc7f5a0abf771a4ab0)
+        ;
+
+        
+    
+    
+            var circle_marker_357ceee92373bd1881d6fd1d1b7aec33 = L.circleMarker(
+                [27.0425884, -82.4201769],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1f77b4", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_ba65ddd90ced13503659ca55ec01ec5f);
+        
+    
+        var popup_9ecf0dd73f8be398e8093be8671eee7f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1ff06d914ee0cbb389dda7bb8774b722 = $(`<div id="html_1ff06d914ee0cbb389dda7bb8774b722" style="width: 100.0%; height: 100.0%;"><b>Taylor, Shannon Nicole</b><br>1207 Falcon Road Venice FL 34293-6115 </div>`)[0];
+                popup_9ecf0dd73f8be398e8093be8671eee7f.setContent(html_1ff06d914ee0cbb389dda7bb8774b722);
+            
+        
+
+        circle_marker_357ceee92373bd1881d6fd1d1b7aec33.bindPopup(popup_9ecf0dd73f8be398e8093be8671eee7f)
+        ;
+
+        
+    
+</script>
+</html>

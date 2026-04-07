@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_ca65b2777a8578022549d1daa787de5c {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+    <div style="
+        position: fixed;
+        top: 12px;
+        left: 12px;
+        z-index: 9999;
+        background: white;
+        border: 2px solid #7f7f7f;
+        padding: 10px 12px;
+        font-size: 14px;
+        line-height: 1.35;
+        box-shadow: 2px 2px 6px rgba(0,0,0,0.25);
+        max-width: 320px;
+    ">
+        <div style="font-weight: bold; margin-bottom: 4px;">Group 18: Venice South - Jacaranda East</div>
+        <div>Leader: Mike Sparr</div>
+        <div>Households: 10</div>
+        <div style="margin-top: 8px;"><a href="index.html">Back to Main Map</a></div>
+    </div>
+    
+    
+            <div class="folium-map" id="map_ca65b2777a8578022549d1daa787de5c" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_ca65b2777a8578022549d1daa787de5c = L.map(
+                "map_ca65b2777a8578022549d1daa787de5c",
+                {
+                    center: [27.057878109999997, -82.40424553],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 15,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_c88440728c6e921a5dbf02e2cb71a109 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_c88440728c6e921a5dbf02e2cb71a109.addTo(map_ca65b2777a8578022549d1daa787de5c);
+        
+    
+        function geo_json_0455e9afe6a86349c06f56214c80381e_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "black", "fillColor": "#7f7f7f", "fillOpacity": 0.3, "weight": 1.8};
+            }
+        }
+
+        function geo_json_0455e9afe6a86349c06f56214c80381e_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_0455e9afe6a86349c06f56214c80381e = L.geoJson(null, {
+                onEachFeature: geo_json_0455e9afe6a86349c06f56214c80381e_onEachFeature,
+            
+                style: geo_json_0455e9afe6a86349c06f56214c80381e_styler,
+            ...{
+}
+        });
+
+        function geo_json_0455e9afe6a86349c06f56214c80381e_add (data) {
+            geo_json_0455e9afe6a86349c06f56214c80381e
+                .addData(data);
+        }
+            geo_json_0455e9afe6a86349c06f56214c80381e_add({"features": [{"geometry": {"coordinates": [[[-82.4065786, 27.0507878], [-82.4091116, 27.054753], [-82.408633, 27.0617281], [-82.4082876, 27.0631093], [-82.3976749, 27.0623649], [-82.3988045999999, 27.0538412], [-82.4065786, 27.0507878]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_0455e9afe6a86349c06f56214c80381e.bindTooltip(
+                `<div>
+                     Group 18: Venice South - Jacaranda East
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_0455e9afe6a86349c06f56214c80381e.addTo(map_ca65b2777a8578022549d1daa787de5c);
+        
+    
+            var circle_marker_f7ddf25a2ed5076ebf65c9186cb46685 = L.circleMarker(
+                [27.0559391, -82.4048703],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#7f7f7f", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_ca65b2777a8578022549d1daa787de5c);
+        
+    
+        var popup_a2364defa1df2935c5b127bde3a152e0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5b3ed3adb07608ea26ebb405942cea47 = $(`<div id="html_5b3ed3adb07608ea26ebb405942cea47" style="width: 100.0%; height: 100.0%;"><b>Anderson, Bronwyn</b><br>8029 Majestic Palms Ct Venice FL 34293-5476 </div>`)[0];
+                popup_a2364defa1df2935c5b127bde3a152e0.setContent(html_5b3ed3adb07608ea26ebb405942cea47);
+            
+        
+
+        circle_marker_f7ddf25a2ed5076ebf65c9186cb46685.bindPopup(popup_a2364defa1df2935c5b127bde3a152e0)
+        ;
+
+        
+    
+    
+            var circle_marker_d12ba51c187b4dc3e2706a96a9b43504 = L.circleMarker(
+                [27.0631093, -82.4082876],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#7f7f7f", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_ca65b2777a8578022549d1daa787de5c);
+        
+    
+        var popup_140c760a0da27facde83280191d776fd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fdde6fcd36764d2f243d4697bf1827d9 = $(`<div id="html_fdde6fcd36764d2f243d4697bf1827d9" style="width: 100.0%; height: 100.0%;"><b>De La Vega, Emilio & Evelyn Lissette</b><br>575 Constance Rd Venice FL 34293-3646 </div>`)[0];
+                popup_140c760a0da27facde83280191d776fd.setContent(html_fdde6fcd36764d2f243d4697bf1827d9);
+            
+        
+
+        circle_marker_d12ba51c187b4dc3e2706a96a9b43504.bindPopup(popup_140c760a0da27facde83280191d776fd)
+        ;
+
+        
+    
+    
+            var circle_marker_086bfa6d77ae873b0807c2afc83af374 = L.circleMarker(
+                [27.0550696, -82.399822],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#7f7f7f", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_ca65b2777a8578022549d1daa787de5c);
+        
+    
+        var popup_c19d11c5c1ac61662f8b2c980a956113 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c36e294ff8bb563f3043715d723d96e0 = $(`<div id="html_c36e294ff8bb563f3043715d723d96e0" style="width: 100.0%; height: 100.0%;"><b>Domalske, Ralene Charisse</b><br>3884 Woodmere Park Blvd Apt 5 Venice FL 34293-5271 </div>`)[0];
+                popup_c19d11c5c1ac61662f8b2c980a956113.setContent(html_c36e294ff8bb563f3043715d723d96e0);
+            
+        
+
+        circle_marker_086bfa6d77ae873b0807c2afc83af374.bindPopup(popup_c19d11c5c1ac61662f8b2c980a956113)
+        ;
+
+        
+    
+    
+            var circle_marker_4b47776bf69f872813845585a88c452a = L.circleMarker(
+                [27.0507878, -82.4065786],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#7f7f7f", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_ca65b2777a8578022549d1daa787de5c);
+        
+    
+        var popup_5b0b01298809d56bdc6386ad0eaef6a5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3e22f5599166e673f1f479234bbd720d = $(`<div id="html_3e22f5599166e673f1f479234bbd720d" style="width: 100.0%; height: 100.0%;"><b>Hand, Charles Richard</b><br>2357 S Tamiami Trail Unit 3, No. 164 Venice FL 34293 </div>`)[0];
+                popup_5b0b01298809d56bdc6386ad0eaef6a5.setContent(html_3e22f5599166e673f1f479234bbd720d);
+            
+        
+
+        circle_marker_4b47776bf69f872813845585a88c452a.bindPopup(popup_5b0b01298809d56bdc6386ad0eaef6a5)
+        ;
+
+        
+    
+    
+            var circle_marker_be790a627e97fe89e3727ffb53bfcf24 = L.circleMarker(
+                [27.0610686, -82.4065808],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#7f7f7f", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_ca65b2777a8578022549d1daa787de5c);
+        
+    
+        var popup_7ec0f6871935e7c1d3cbc05cdd851101 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dddbe25f7669132fd29c1562a1a665be = $(`<div id="html_dddbe25f7669132fd29c1562a1a665be" style="width: 100.0%; height: 100.0%;"><b>Hutcherson, Melanie</b><br>595 E Baffin Dr Venice FL 34293-3632 </div>`)[0];
+                popup_7ec0f6871935e7c1d3cbc05cdd851101.setContent(html_dddbe25f7669132fd29c1562a1a665be);
+            
+        
+
+        circle_marker_be790a627e97fe89e3727ffb53bfcf24.bindPopup(popup_7ec0f6871935e7c1d3cbc05cdd851101)
+        ;
+
+        
+    
+    
+            var circle_marker_cb3643fc00864aad915de7cc03a87e2d = L.circleMarker(
+                [27.0538412, -82.3988045999999],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#7f7f7f", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_ca65b2777a8578022549d1daa787de5c);
+        
+    
+        var popup_01fe0c694fd46a34d319dedc223d7033 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e6202f727974106958d3729243eaf718 = $(`<div id="html_e6202f727974106958d3729243eaf718" style="width: 100.0%; height: 100.0%;"><b>Kitterman, David Alan</b><br>3730 Cadbury Cir Apt 603 Venice FL 34293 </div>`)[0];
+                popup_01fe0c694fd46a34d319dedc223d7033.setContent(html_e6202f727974106958d3729243eaf718);
+            
+        
+
+        circle_marker_cb3643fc00864aad915de7cc03a87e2d.bindPopup(popup_01fe0c694fd46a34d319dedc223d7033)
+        ;
+
+        
+    
+    
+            var circle_marker_96e1e596e7d0fc8c70427d7f70d210dc = L.circleMarker(
+                [27.0617281, -82.408633],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#7f7f7f", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_ca65b2777a8578022549d1daa787de5c);
+        
+    
+        var popup_c2033ba39418180ede89441ed65d7574 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fcd466682e14981b6a7f56b746a0c470 = $(`<div id="html_fcd466682e14981b6a7f56b746a0c470" style="width: 100.0%; height: 100.0%;"><b>Sullivan, Sarah</b><br>503 Bradenton Rd Venice FL 34293-3620 </div>`)[0];
+                popup_c2033ba39418180ede89441ed65d7574.setContent(html_fcd466682e14981b6a7f56b746a0c470);
+            
+        
+
+        circle_marker_96e1e596e7d0fc8c70427d7f70d210dc.bindPopup(popup_c2033ba39418180ede89441ed65d7574)
+        ;
+
+        
+    
+    
+            var circle_marker_7b6b9497051403da9b53992dee4511b8 = L.circleMarker(
+                [27.0601195, -82.4020919],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#7f7f7f", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_ca65b2777a8578022549d1daa787de5c);
+        
+    
+        var popup_7d9ee9619bec9ec42257ebed2c9e8e8b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dab770d1fa1ac19e905cc422b95d8a98 = $(`<div id="html_dab770d1fa1ac19e905cc422b95d8a98" style="width: 100.0%; height: 100.0%;"><b>Swat, Dennis</b><br>3147 Lobelia Rd Venice FL 34293-3733 </div>`)[0];
+                popup_7d9ee9619bec9ec42257ebed2c9e8e8b.setContent(html_dab770d1fa1ac19e905cc422b95d8a98);
+            
+        
+
+        circle_marker_7b6b9497051403da9b53992dee4511b8.bindPopup(popup_7d9ee9619bec9ec42257ebed2c9e8e8b)
+        ;
+
+        
+    
+    
+            var circle_marker_22ee14a84daea6b107b2760b5817a2ca = L.circleMarker(
+                [27.054753, -82.4091116],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#7f7f7f", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_ca65b2777a8578022549d1daa787de5c);
+        
+    
+        var popup_485965a1154c379e8d9132cc160c5677 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f48102d2797c585d08cfdc9e635ae093 = $(`<div id="html_f48102d2797c585d08cfdc9e635ae093" style="width: 100.0%; height: 100.0%;"><b>Van Dyke, Megan R.</b><br>2176 Park Rd Venice FL 34293-5214 </div>`)[0];
+                popup_485965a1154c379e8d9132cc160c5677.setContent(html_f48102d2797c585d08cfdc9e635ae093);
+            
+        
+
+        circle_marker_22ee14a84daea6b107b2760b5817a2ca.bindPopup(popup_485965a1154c379e8d9132cc160c5677)
+        ;
+
+        
+    
+    
+            var circle_marker_a8d533c629f0e2d1aa4053184e3a74a3 = L.circleMarker(
+                [27.0623649, -82.3976749],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#7f7f7f", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_ca65b2777a8578022549d1daa787de5c);
+        
+    
+        var popup_089fa1ccb84dcfd4b5bb5af8be0b42d7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a586fcc3020d422634a12cf222a896ed = $(`<div id="html_a586fcc3020d422634a12cf222a896ed" style="width: 100.0%; height: 100.0%;"><b>Waites, Unknown & Darlene Jo</b><br>1913 Pebble Beach Ct Venice FL 34293-3830 </div>`)[0];
+                popup_089fa1ccb84dcfd4b5bb5af8be0b42d7.setContent(html_a586fcc3020d422634a12cf222a896ed);
+            
+        
+
+        circle_marker_a8d533c629f0e2d1aa4053184e3a74a3.bindPopup(popup_089fa1ccb84dcfd4b5bb5af8be0b42d7)
+        ;
+
+        
+    
+</script>
+</html>

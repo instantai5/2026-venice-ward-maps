@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_3135761df1cf67c049874390cf574f91 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+    <div style="
+        position: fixed;
+        top: 12px;
+        left: 12px;
+        z-index: 9999;
+        background: white;
+        border: 2px solid #e377c2;
+        padding: 10px 12px;
+        font-size: 14px;
+        line-height: 1.35;
+        box-shadow: 2px 2px 6px rgba(0,0,0,0.25);
+        max-width: 320px;
+    ">
+        <div style="font-weight: bold; margin-bottom: 4px;">Group 7: Nokomis - South Central</div>
+        <div>Leader: Nate Kirk</div>
+        <div>Households: 6</div>
+        <div style="margin-top: 8px;"><a href="index.html">Back to Main Map</a></div>
+    </div>
+    
+    
+            <div class="folium-map" id="map_3135761df1cf67c049874390cf574f91" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_3135761df1cf67c049874390cf574f91 = L.map(
+                "map_3135761df1cf67c049874390cf574f91",
+                {
+                    center: [27.122988166666662, -82.40888988333333],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 15,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_057c5497b400fe61399aac0b581358e2 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_057c5497b400fe61399aac0b581358e2.addTo(map_3135761df1cf67c049874390cf574f91);
+        
+    
+        function geo_json_a4374d9d526d305e8d7f99ded5fa0059_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "black", "fillColor": "#e377c2", "fillOpacity": 0.3, "weight": 1.8};
+            }
+        }
+
+        function geo_json_a4374d9d526d305e8d7f99ded5fa0059_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_a4374d9d526d305e8d7f99ded5fa0059 = L.geoJson(null, {
+                onEachFeature: geo_json_a4374d9d526d305e8d7f99ded5fa0059_onEachFeature,
+            
+                style: geo_json_a4374d9d526d305e8d7f99ded5fa0059_styler,
+            ...{
+}
+        });
+
+        function geo_json_a4374d9d526d305e8d7f99ded5fa0059_add (data) {
+            geo_json_a4374d9d526d305e8d7f99ded5fa0059
+                .addData(data);
+        }
+            geo_json_a4374d9d526d305e8d7f99ded5fa0059_add({"features": [{"geometry": {"coordinates": [[[-82.4092501, 27.1169197], [-82.4122208, 27.1225772], [-82.414042, 27.1305045], [-82.4025739, 27.1213737], [-82.4034393, 27.1186497], [-82.4092501, 27.1169197]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_a4374d9d526d305e8d7f99ded5fa0059.bindTooltip(
+                `<div>
+                     Group 7: Nokomis - South Central
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_a4374d9d526d305e8d7f99ded5fa0059.addTo(map_3135761df1cf67c049874390cf574f91);
+        
+    
+            var circle_marker_3d19ef9f3559a1ecd3aaecc1ac1e9f6b = L.circleMarker(
+                [27.1186497, -82.4034393],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e377c2", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_3135761df1cf67c049874390cf574f91);
+        
+    
+        var popup_5b1c478a6ce9581346cccb71969ec471 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_673e88eeade9e40e93ae86e14d2e454f = $(`<div id="html_673e88eeade9e40e93ae86e14d2e454f" style="width: 100.0%; height: 100.0%;"><b>Beadle, John A & Maureen</b><br>665 Sawgrass Bridge Rd Venice FL 34292-4481 </div>`)[0];
+                popup_5b1c478a6ce9581346cccb71969ec471.setContent(html_673e88eeade9e40e93ae86e14d2e454f);
+            
+        
+
+        circle_marker_3d19ef9f3559a1ecd3aaecc1ac1e9f6b.bindPopup(popup_5b1c478a6ce9581346cccb71969ec471)
+        ;
+
+        
+    
+    
+            var circle_marker_07cf082b8a7ca79f2b44219ed8768234 = L.circleMarker(
+                [27.1225772, -82.4122208],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e377c2", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_3135761df1cf67c049874390cf574f91);
+        
+    
+        var popup_a5102fdd68f0975dbfa21129884161aa = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6411cb831012f1e6771cf9080a26a84f = $(`<div id="html_6411cb831012f1e6771cf9080a26a84f" style="width: 100.0%; height: 100.0%;"><b>Garlisch, Pamela Ann</b><br>1434 Strada D'Oro Venice FL 34292 </div>`)[0];
+                popup_a5102fdd68f0975dbfa21129884161aa.setContent(html_6411cb831012f1e6771cf9080a26a84f);
+            
+        
+
+        circle_marker_07cf082b8a7ca79f2b44219ed8768234.bindPopup(popup_a5102fdd68f0975dbfa21129884161aa)
+        ;
+
+        
+    
+    
+            var circle_marker_1a31a8cbb933d15faf7e3d8c1d69d503 = L.circleMarker(
+                [27.1169197, -82.4092501],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e377c2", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_3135761df1cf67c049874390cf574f91);
+        
+    
+        var popup_9f1357d8e69513baaad1b74b963e833e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d03d2a05f1027a247ab178d9d4dcc9a7 = $(`<div id="html_d03d2a05f1027a247ab178d9d4dcc9a7" style="width: 100.0%; height: 100.0%;"><b>Hargis, Sheryl</b><br>1050 Capri Isles Blvd Apt C101 Venice FL 34292-6406 </div>`)[0];
+                popup_9f1357d8e69513baaad1b74b963e833e.setContent(html_d03d2a05f1027a247ab178d9d4dcc9a7);
+            
+        
+
+        circle_marker_1a31a8cbb933d15faf7e3d8c1d69d503.bindPopup(popup_9f1357d8e69513baaad1b74b963e833e)
+        ;
+
+        
+    
+    
+            var circle_marker_2df425e980a25517495f8c1ab1f72c91 = L.circleMarker(
+                [27.1213737, -82.4025739],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e377c2", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_3135761df1cf67c049874390cf574f91);
+        
+    
+        var popup_27d33f5d3f7650476f4ffa9f7a55fdf9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_982ed1fd7c56ca723b3e937c35f66fa6 = $(`<div id="html_982ed1fd7c56ca723b3e937c35f66fa6" style="width: 100.0%; height: 100.0%;"><b>Ingram, Michael & Mary</b><br>747 Egret Walk Ln Venice FL 34292-4485 </div>`)[0];
+                popup_27d33f5d3f7650476f4ffa9f7a55fdf9.setContent(html_982ed1fd7c56ca723b3e937c35f66fa6);
+            
+        
+
+        circle_marker_2df425e980a25517495f8c1ab1f72c91.bindPopup(popup_27d33f5d3f7650476f4ffa9f7a55fdf9)
+        ;
+
+        
+    
+    
+            var circle_marker_877304c068cd7a1b8a5e8997b14257dc = L.circleMarker(
+                [27.1305045, -82.414042],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e377c2", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_3135761df1cf67c049874390cf574f91);
+        
+    
+        var popup_eab6a36ad96c22457c761b706f147ab1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_22edd89eadc759104e9dea6f729bb668 = $(`<div id="html_22edd89eadc759104e9dea6f729bb668" style="width: 100.0%; height: 100.0%;"><b>Kirk, Nathan & Kaitlyn Flora</b><br>289 Parlor St Nokomis FL 34275-5012 </div>`)[0];
+                popup_eab6a36ad96c22457c761b706f147ab1.setContent(html_22edd89eadc759104e9dea6f729bb668);
+            
+        
+
+        circle_marker_877304c068cd7a1b8a5e8997b14257dc.bindPopup(popup_eab6a36ad96c22457c761b706f147ab1)
+        ;
+
+        
+    
+    
+            var circle_marker_8677305e82d8f3835b950391bf60d37b = L.circleMarker(
+                [27.1279042, -82.4118132],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e377c2", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_3135761df1cf67c049874390cf574f91);
+        
+    
+        var popup_8f94ad2cdd823ba18bbc25a8b3fa3d7a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_020d2e66f04f213175c0dfbe2f2dfe76 = $(`<div id="html_020d2e66f04f213175c0dfbe2f2dfe76" style="width: 100.0%; height: 100.0%;"><b>Shipley, Randy & Jo</b><br>1742 Kilruss Dr Venice FL 34292-4312 </div>`)[0];
+                popup_8f94ad2cdd823ba18bbc25a8b3fa3d7a.setContent(html_020d2e66f04f213175c0dfbe2f2dfe76);
+            
+        
+
+        circle_marker_8677305e82d8f3835b950391bf60d37b.bindPopup(popup_8f94ad2cdd823ba18bbc25a8b3fa3d7a)
+        ;
+
+        
+    
+</script>
+</html>

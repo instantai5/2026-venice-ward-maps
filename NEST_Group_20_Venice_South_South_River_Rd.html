@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_0d69de5928368d667688f659b0f81a77 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+    <div style="
+        position: fixed;
+        top: 12px;
+        left: 12px;
+        z-index: 9999;
+        background: white;
+        border: 2px solid #17becf;
+        padding: 10px 12px;
+        font-size: 14px;
+        line-height: 1.35;
+        box-shadow: 2px 2px 6px rgba(0,0,0,0.25);
+        max-width: 320px;
+    ">
+        <div style="font-weight: bold; margin-bottom: 4px;">Group 20: Venice South - South River Rd</div>
+        <div>Leader: Arne Vogt</div>
+        <div>Households: 8</div>
+        <div style="margin-top: 8px;"><a href="index.html">Back to Main Map</a></div>
+    </div>
+    
+    
+            <div class="folium-map" id="map_0d69de5928368d667688f659b0f81a77" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_0d69de5928368d667688f659b0f81a77 = L.map(
+                "map_0d69de5928368d667688f659b0f81a77",
+                {
+                    center: [27.055635662500002, -82.32245612499997],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 15,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_06bd0b02ea5251e5153dc3f8fd2463c8 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_06bd0b02ea5251e5153dc3f8fd2463c8.addTo(map_0d69de5928368d667688f659b0f81a77);
+        
+    
+        function geo_json_0142b84ad100702094fa4ddbee061e3a_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "black", "fillColor": "#17becf", "fillOpacity": 0.3, "weight": 1.8};
+            }
+        }
+
+        function geo_json_0142b84ad100702094fa4ddbee061e3a_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_0142b84ad100702094fa4ddbee061e3a = L.geoJson(null, {
+                onEachFeature: geo_json_0142b84ad100702094fa4ddbee061e3a_onEachFeature,
+            
+                style: geo_json_0142b84ad100702094fa4ddbee061e3a_styler,
+            ...{
+}
+        });
+
+        function geo_json_0142b84ad100702094fa4ddbee061e3a_add (data) {
+            geo_json_0142b84ad100702094fa4ddbee061e3a
+                .addData(data);
+        }
+            geo_json_0142b84ad100702094fa4ddbee061e3a_add({"features": [{"geometry": {"coordinates": [[[-82.307172, 27.048025], [-82.3337626, 27.0510477], [-82.3362095999999, 27.0586081], [-82.3303644, 27.0699882], [-82.312539, 27.059095], [-82.307172, 27.048025]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_0142b84ad100702094fa4ddbee061e3a.bindTooltip(
+                `<div>
+                     Group 20: Venice South - South River Rd
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_0142b84ad100702094fa4ddbee061e3a.addTo(map_0d69de5928368d667688f659b0f81a77);
+        
+    
+            var circle_marker_3db63a351c12c0b38420d29a6002e6f4 = L.circleMarker(
+                [27.0586081, -82.3362095999999],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#17becf", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_0d69de5928368d667688f659b0f81a77);
+        
+    
+        var popup_079f1c4e48144304ceb62b73fae9dd4c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0c14fc1d4b374131c77e297f206203d2 = $(`<div id="html_0c14fc1d4b374131c77e297f206203d2" style="width: 100.0%; height: 100.0%;"><b>Millsap, Robert</b><br>20591 Trattoria Loop Venice FL 34293-3572 </div>`)[0];
+                popup_079f1c4e48144304ceb62b73fae9dd4c.setContent(html_0c14fc1d4b374131c77e297f206203d2);
+            
+        
+
+        circle_marker_3db63a351c12c0b38420d29a6002e6f4.bindPopup(popup_079f1c4e48144304ceb62b73fae9dd4c)
+        ;
+
+        
+    
+    
+            var circle_marker_5e62332963af5782fca76d89f520573e = L.circleMarker(
+                [27.0542827, -82.3294004999999],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#17becf", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_0d69de5928368d667688f659b0f81a77);
+        
+    
+        var popup_e0ca5600bce1ceb34f0ab4438ff99e41 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_384a732d1c54d17b6f338bfee8f22f5a = $(`<div id="html_384a732d1c54d17b6f338bfee8f22f5a" style="width: 100.0%; height: 100.0%;"><b>Nichols, Chris & Karen Mary</b><br>12580 Ghiberti Cir Apt 32-201 Venice FL 34293-3873 </div>`)[0];
+                popup_e0ca5600bce1ceb34f0ab4438ff99e41.setContent(html_384a732d1c54d17b6f338bfee8f22f5a);
+            
+        
+
+        circle_marker_5e62332963af5782fca76d89f520573e.bindPopup(popup_e0ca5600bce1ceb34f0ab4438ff99e41)
+        ;
+
+        
+    
+    
+            var circle_marker_01c977a73899c511b0825a9a649ffdc1 = L.circleMarker(
+                [27.0510477, -82.3337626],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#17becf", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_0d69de5928368d667688f659b0f81a77);
+        
+    
+        var popup_7df1fe6d10e499731fa6845261b6ecaa = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_88ad8cf26ec3f6d7dbdb1df71724bcb6 = $(`<div id="html_88ad8cf26ec3f6d7dbdb1df71724bcb6" style="width: 100.0%; height: 100.0%;"><b>O'Neill, Kevin</b><br>20071 Ragazza Circle Unit No. 202 Venice FL 34293-3460 </div>`)[0];
+                popup_7df1fe6d10e499731fa6845261b6ecaa.setContent(html_88ad8cf26ec3f6d7dbdb1df71724bcb6);
+            
+        
+
+        circle_marker_01c977a73899c511b0825a9a649ffdc1.bindPopup(popup_7df1fe6d10e499731fa6845261b6ecaa)
+        ;
+
+        
+    
+    
+            var circle_marker_8bc109a90c047986c5f501c1d9b59c95 = L.circleMarker(
+                [27.0699882, -82.3303644],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#17becf", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_0d69de5928368d667688f659b0f81a77);
+        
+    
+        var popup_d88335eb7adf84dd0bcd6c6621eeccc4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8b33ca2ce607096e280aed0b20ba04a4 = $(`<div id="html_8b33ca2ce607096e280aed0b20ba04a4" style="width: 100.0%; height: 100.0%;"><b>Pandl, Alfred John & Denyse</b><br>21254 Chatahoochee Ave Venice FL 34293-2689 </div>`)[0];
+                popup_d88335eb7adf84dd0bcd6c6621eeccc4.setContent(html_8b33ca2ce607096e280aed0b20ba04a4);
+            
+        
+
+        circle_marker_8bc109a90c047986c5f501c1d9b59c95.bindPopup(popup_d88335eb7adf84dd0bcd6c6621eeccc4)
+        ;
+
+        
+    
+    
+            var circle_marker_a90417befe72b68d505b489825bf39d2 = L.circleMarker(
+                [27.0514437, -82.3170193999999],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#17becf", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_0d69de5928368d667688f659b0f81a77);
+        
+    
+        var popup_b5f60b91e750ec7a7d1b467c111d4420 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_32d4336edc4975eac5fd24b817210e2a = $(`<div id="html_32d4336edc4975eac5fd24b817210e2a" style="width: 100.0%; height: 100.0%;"><b>Picklesimer, Bo</b><br>11770 Tapestry Ln Venice FL 34293-2256 </div>`)[0];
+                popup_b5f60b91e750ec7a7d1b467c111d4420.setContent(html_32d4336edc4975eac5fd24b817210e2a);
+            
+        
+
+        circle_marker_a90417befe72b68d505b489825bf39d2.bindPopup(popup_b5f60b91e750ec7a7d1b467c111d4420)
+        ;
+
+        
+    
+    
+            var circle_marker_9280edf7ba49c1d3c6d18c2cbd086359 = L.circleMarker(
+                [27.048025, -82.307172],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#17becf", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_0d69de5928368d667688f659b0f81a77);
+        
+    
+        var popup_cf843597925d385ea9179d3614560334 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ddd91027b2b6590440c0f538efd225de = $(`<div id="html_ddd91027b2b6590440c0f538efd225de" style="width: 100.0%; height: 100.0%;"><b>Roberts, Daniel Calvin & Amanda Denise</b><br>19861 Montenero Way Venice FL 34293-2284 </div>`)[0];
+                popup_cf843597925d385ea9179d3614560334.setContent(html_ddd91027b2b6590440c0f538efd225de);
+            
+        
+
+        circle_marker_9280edf7ba49c1d3c6d18c2cbd086359.bindPopup(popup_cf843597925d385ea9179d3614560334)
+        ;
+
+        
+    
+    
+            var circle_marker_1c17f92aa973c73a0bbbe1f641dd3fcf = L.circleMarker(
+                [27.059095, -82.312539],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#17becf", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_0d69de5928368d667688f659b0f81a77);
+        
+    
+        var popup_93d46f3be69285f8e16d144866659a09 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0136a642eba1a8a0a2711d27d2806aa2 = $(`<div id="html_0136a642eba1a8a0a2711d27d2806aa2" style="width: 100.0%; height: 100.0%;"><b>Villanueva, Damasa</b><br>680 N River Road Venice FL 34293 </div>`)[0];
+                popup_93d46f3be69285f8e16d144866659a09.setContent(html_0136a642eba1a8a0a2711d27d2806aa2);
+            
+        
+
+        circle_marker_1c17f92aa973c73a0bbbe1f641dd3fcf.bindPopup(popup_93d46f3be69285f8e16d144866659a09)
+        ;
+
+        
+    
+    
+            var circle_marker_4e8a85481d9186cfea768441463c44fd = L.circleMarker(
+                [27.0525949, -82.3131815],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#17becf", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_0d69de5928368d667688f659b0f81a77);
+        
+    
+        var popup_618310c65b796923609155c4d2f34610 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a3a155adff86403e1d08801b2b311fb5 = $(`<div id="html_a3a155adff86403e1d08801b2b311fb5" style="width: 100.0%; height: 100.0%;"><b>Vogt, Arne & Tanya</b><br>11549 Tapestry Lane Venice FL 34293 </div>`)[0];
+                popup_618310c65b796923609155c4d2f34610.setContent(html_a3a155adff86403e1d08801b2b311fb5);
+            
+        
+
+        circle_marker_4e8a85481d9186cfea768441463c44fd.bindPopup(popup_618310c65b796923609155c4d2f34610)
+        ;
+
+        
+    
+</script>
+</html>

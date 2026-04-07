@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_89e2c6cc66e539f0d6095cf151a3d5bf {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+    <div style="
+        position: fixed;
+        top: 12px;
+        left: 12px;
+        z-index: 9999;
+        background: white;
+        border: 2px solid #8c564b;
+        padding: 10px 12px;
+        font-size: 14px;
+        line-height: 1.35;
+        box-shadow: 2px 2px 6px rgba(0,0,0,0.25);
+        max-width: 320px;
+    ">
+        <div style="font-weight: bold; margin-bottom: 4px;">Group 6: Nokomis - South West</div>
+        <div>Leader: David Williams</div>
+        <div>Households: 7</div>
+        <div style="margin-top: 8px;"><a href="index.html">Back to Main Map</a></div>
+    </div>
+    
+    
+            <div class="folium-map" id="map_89e2c6cc66e539f0d6095cf151a3d5bf" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_89e2c6cc66e539f0d6095cf151a3d5bf = L.map(
+                "map_89e2c6cc66e539f0d6095cf151a3d5bf",
+                {
+                    center: [27.125522328571428, -82.36954419999996],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 15,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_79197940a9bcd02b5dcf9439284a057b = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_79197940a9bcd02b5dcf9439284a057b.addTo(map_89e2c6cc66e539f0d6095cf151a3d5bf);
+        
+    
+        function geo_json_4b7a63f98231facacc3846cce8ff5614_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "black", "fillColor": "#8c564b", "fillOpacity": 0.3, "weight": 1.8};
+            }
+        }
+
+        function geo_json_4b7a63f98231facacc3846cce8ff5614_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_4b7a63f98231facacc3846cce8ff5614 = L.geoJson(null, {
+                onEachFeature: geo_json_4b7a63f98231facacc3846cce8ff5614_onEachFeature,
+            
+                style: geo_json_4b7a63f98231facacc3846cce8ff5614_styler,
+            ...{
+}
+        });
+
+        function geo_json_4b7a63f98231facacc3846cce8ff5614_add (data) {
+            geo_json_4b7a63f98231facacc3846cce8ff5614
+                .addData(data);
+        }
+            geo_json_4b7a63f98231facacc3846cce8ff5614_add({"features": [{"geometry": {"coordinates": [[[-82.3695384, 27.1238224], [-82.378446, 27.1240321], [-82.3803095999999, 27.1248459], [-82.3697462, 27.1294349], [-82.3654708999999, 27.1271798], [-82.3603, 27.124234], [-82.3695384, 27.1238224]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_4b7a63f98231facacc3846cce8ff5614.bindTooltip(
+                `<div>
+                     Group 6: Nokomis - South West
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_4b7a63f98231facacc3846cce8ff5614.addTo(map_89e2c6cc66e539f0d6095cf151a3d5bf);
+        
+    
+            var circle_marker_4444b98ef1c499e4940fe873e42e4c38 = L.circleMarker(
+                [27.1251072, -82.3629983],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8c564b", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_89e2c6cc66e539f0d6095cf151a3d5bf);
+        
+    
+        var popup_3e0a2689ea97f7c0315592929abbe0e6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_08dce483f28c3827994e3164f68b7783 = $(`<div id="html_08dce483f28c3827994e3164f68b7783" style="width: 100.0%; height: 100.0%;"><b>Burling Ibarguen, Michael A. & Sophia</b><br>208 Daylily Blvd Nokomis FL 34275-1757 </div>`)[0];
+                popup_3e0a2689ea97f7c0315592929abbe0e6.setContent(html_08dce483f28c3827994e3164f68b7783);
+            
+        
+
+        circle_marker_4444b98ef1c499e4940fe873e42e4c38.bindPopup(popup_3e0a2689ea97f7c0315592929abbe0e6)
+        ;
+
+        
+    
+    
+            var circle_marker_69f48d0ffe797a194310a4e542676ccb = L.circleMarker(
+                [27.1248459, -82.3803095999999],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8c564b", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_89e2c6cc66e539f0d6095cf151a3d5bf);
+        
+    
+        var popup_706d6ee3fd506e82b028f3244b13266b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a275db71a3fb6052b0dbc2049d04fd15 = $(`<div id="html_a275db71a3fb6052b0dbc2049d04fd15" style="width: 100.0%; height: 100.0%;"><b>Millet, Nancy</b><br>249 Marcheno Way Nokomis FL 34275-2121 </div>`)[0];
+                popup_706d6ee3fd506e82b028f3244b13266b.setContent(html_a275db71a3fb6052b0dbc2049d04fd15);
+            
+        
+
+        circle_marker_69f48d0ffe797a194310a4e542676ccb.bindPopup(popup_706d6ee3fd506e82b028f3244b13266b)
+        ;
+
+        
+    
+    
+            var circle_marker_e38cf5a6ff87389fb8bf0c5b5dd12b52 = L.circleMarker(
+                [27.1271798, -82.3654708999999],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8c564b", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_89e2c6cc66e539f0d6095cf151a3d5bf);
+        
+    
+        var popup_135462bd9f677dc343e98e113d1d56da = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bfaa1add87f71c5a425eb34a84b35254 = $(`<div id="html_bfaa1add87f71c5a425eb34a84b35254" style="width: 100.0%; height: 100.0%;"><b>Riquino, Fernando & Tammi</b><br>277 DAYLILY BLVD NOKOMIS FL 34275-1758 </div>`)[0];
+                popup_135462bd9f677dc343e98e113d1d56da.setContent(html_bfaa1add87f71c5a425eb34a84b35254);
+            
+        
+
+        circle_marker_e38cf5a6ff87389fb8bf0c5b5dd12b52.bindPopup(popup_135462bd9f677dc343e98e113d1d56da)
+        ;
+
+        
+    
+    
+            var circle_marker_d74b7b36d936357795dca2839b71f171 = L.circleMarker(
+                [27.1294349, -82.3697462],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8c564b", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_89e2c6cc66e539f0d6095cf151a3d5bf);
+        
+    
+        var popup_1da91046c094ac3ca72a932a9b9b0570 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c52484b14d791fc7ce972597bd35a027 = $(`<div id="html_c52484b14d791fc7ce972597bd35a027" style="width: 100.0%; height: 100.0%;"><b>Samuels, Troy Richard & Jennifer</b><br>280 Palmaria Ct Nokomis FL 34275-5611 </div>`)[0];
+                popup_1da91046c094ac3ca72a932a9b9b0570.setContent(html_c52484b14d791fc7ce972597bd35a027);
+            
+        
+
+        circle_marker_d74b7b36d936357795dca2839b71f171.bindPopup(popup_1da91046c094ac3ca72a932a9b9b0570)
+        ;
+
+        
+    
+    
+            var circle_marker_e705a640e0b632d5b2bf537f95860aa2 = L.circleMarker(
+                [27.1240321, -82.378446],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8c564b", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_89e2c6cc66e539f0d6095cf151a3d5bf);
+        
+    
+        var popup_ad706f454690e27e633950656d1a074f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d38f7be26751f6556a00fd76b6b59f63 = $(`<div id="html_d38f7be26751f6556a00fd76b6b59f63" style="width: 100.0%; height: 100.0%;"><b>Streeter, Sabrina</b><br>212 Marcheno Way Nokomis FL 34275-2156 </div>`)[0];
+                popup_ad706f454690e27e633950656d1a074f.setContent(html_d38f7be26751f6556a00fd76b6b59f63);
+            
+        
+
+        circle_marker_e705a640e0b632d5b2bf537f95860aa2.bindPopup(popup_ad706f454690e27e633950656d1a074f)
+        ;
+
+        
+    
+    
+            var circle_marker_b0462037379a990dd27e449447217128 = L.circleMarker(
+                [27.124234, -82.3603],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8c564b", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_89e2c6cc66e539f0d6095cf151a3d5bf);
+        
+    
+        var popup_7c680b5e68c338dda14858dde1c004cc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d87f7cac8d76aefbedb0fe540f898110 = $(`<div id="html_d87f7cac8d76aefbedb0fe540f898110" style="width: 100.0%; height: 100.0%;"><b>Williams, David & Sundee</b><br>485 Baneberry Ct Nokomis FL 34275-1740 </div>`)[0];
+                popup_7c680b5e68c338dda14858dde1c004cc.setContent(html_d87f7cac8d76aefbedb0fe540f898110);
+            
+        
+
+        circle_marker_b0462037379a990dd27e449447217128.bindPopup(popup_7c680b5e68c338dda14858dde1c004cc)
+        ;
+
+        
+    
+    
+            var circle_marker_effece64e27d470b85481be8dad2fa0a = L.circleMarker(
+                [27.1238224, -82.3695384],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8c564b", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_89e2c6cc66e539f0d6095cf151a3d5bf);
+        
+    
+        var popup_a5a88cf316ae5428809a9953ece81038 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e28224fd095809f4c87cee2f6c1d1618 = $(`<div id="html_e28224fd095809f4c87cee2f6c1d1618" style="width: 100.0%; height: 100.0%;"><b>Woodruff, Dave & Maryanne</b><br>244 Brienza Loop Nokomis FL 34275-5603 </div>`)[0];
+                popup_a5a88cf316ae5428809a9953ece81038.setContent(html_e28224fd095809f4c87cee2f6c1d1618);
+            
+        
+
+        circle_marker_effece64e27d470b85481be8dad2fa0a.bindPopup(popup_a5a88cf316ae5428809a9953ece81038)
+        ;
+
+        
+    
+</script>
+</html>

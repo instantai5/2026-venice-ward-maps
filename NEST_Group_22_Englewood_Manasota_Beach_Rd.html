@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_a13925d26abf054e0944c98be5710ab6 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+    <div style="
+        position: fixed;
+        top: 12px;
+        left: 12px;
+        z-index: 9999;
+        background: white;
+        border: 2px solid #ff7f0e;
+        padding: 10px 12px;
+        font-size: 14px;
+        line-height: 1.35;
+        box-shadow: 2px 2px 6px rgba(0,0,0,0.25);
+        max-width: 320px;
+    ">
+        <div style="font-weight: bold; margin-bottom: 4px;">Group 22: Englewood - Manasota Beach Rd</div>
+        <div>Leader: Lloyd McAllister</div>
+        <div>Households: 8</div>
+        <div style="margin-top: 8px;"><a href="index.html">Back to Main Map</a></div>
+    </div>
+    
+    
+            <div class="folium-map" id="map_a13925d26abf054e0944c98be5710ab6" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_a13925d26abf054e0944c98be5710ab6 = L.map(
+                "map_a13925d26abf054e0944c98be5710ab6",
+                {
+                    center: [27.0270004625, -82.4055753625],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 15,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_9d0cb6ca49021ccd5a4e0de65712ea65 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_9d0cb6ca49021ccd5a4e0de65712ea65.addTo(map_a13925d26abf054e0944c98be5710ab6);
+        
+    
+        function geo_json_bbf0cf0d8b9ca84dcb2d5de35f6758fb_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "black", "fillColor": "#ff7f0e", "fillOpacity": 0.3, "weight": 1.8};
+            }
+        }
+
+        function geo_json_bbf0cf0d8b9ca84dcb2d5de35f6758fb_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_bbf0cf0d8b9ca84dcb2d5de35f6758fb = L.geoJson(null, {
+                onEachFeature: geo_json_bbf0cf0d8b9ca84dcb2d5de35f6758fb_onEachFeature,
+            
+                style: geo_json_bbf0cf0d8b9ca84dcb2d5de35f6758fb_styler,
+            ...{
+}
+        });
+
+        function geo_json_bbf0cf0d8b9ca84dcb2d5de35f6758fb_add (data) {
+            geo_json_bbf0cf0d8b9ca84dcb2d5de35f6758fb
+                .addData(data);
+        }
+            geo_json_bbf0cf0d8b9ca84dcb2d5de35f6758fb_add({"features": [{"geometry": {"coordinates": [[[-82.4013355, 27.0171115], [-82.4108131, 27.0262257], [-82.4133857, 27.0308807], [-82.4094906, 27.0342296], [-82.4088836, 27.0342463], [-82.3984108, 27.0235569], [-82.3984361, 27.0232582], [-82.4013355, 27.0171115]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_bbf0cf0d8b9ca84dcb2d5de35f6758fb.bindTooltip(
+                `<div>
+                     Group 22: Englewood - Manasota Beach Rd
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_bbf0cf0d8b9ca84dcb2d5de35f6758fb.addTo(map_a13925d26abf054e0944c98be5710ab6);
+        
+    
+            var circle_marker_ced50d5c5fa611a6b5b50687446f4d18 = L.circleMarker(
+                [27.0342463, -82.4088836],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff7f0e", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_a13925d26abf054e0944c98be5710ab6);
+        
+    
+        var popup_f86276596a8bff75f8a5f0417c9a31f4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f366a7c30ff7bb8daec7766199992897 = $(`<div id="html_f366a7c30ff7bb8daec7766199992897" style="width: 100.0%; height: 100.0%;"><b>Coleman, James Edward & Mary Anne</b><br>725 Colegate Rd. Venice FL 34293 </div>`)[0];
+                popup_f86276596a8bff75f8a5f0417c9a31f4.setContent(html_f366a7c30ff7bb8daec7766199992897);
+            
+        
+
+        circle_marker_ced50d5c5fa611a6b5b50687446f4d18.bindPopup(popup_f86276596a8bff75f8a5f0417c9a31f4)
+        ;
+
+        
+    
+    
+            var circle_marker_1e4b3e70cdf9b996928579a28aa891f8 = L.circleMarker(
+                [27.0232582, -82.3984361],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff7f0e", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_a13925d26abf054e0944c98be5710ab6);
+        
+    
+        var popup_9802b8408dc8dfcbca7f4f6843f22ad2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_51133b81a8d96d8a3cf7f88f782e2a4e = $(`<div id="html_51133b81a8d96d8a3cf7f88f782e2a4e" style="width: 100.0%; height: 100.0%;"><b>Cygnor, Joseph Douglas & Gina Renee Galvan</b><br>5876 Denison Dr Venice FL 34293-6802 </div>`)[0];
+                popup_9802b8408dc8dfcbca7f4f6843f22ad2.setContent(html_51133b81a8d96d8a3cf7f88f782e2a4e);
+            
+        
+
+        circle_marker_1e4b3e70cdf9b996928579a28aa891f8.bindPopup(popup_9802b8408dc8dfcbca7f4f6843f22ad2)
+        ;
+
+        
+    
+    
+            var circle_marker_ae5552c4c4dd0b8d603fc6805ef3d977 = L.circleMarker(
+                [27.0308807, -82.4133857],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff7f0e", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_a13925d26abf054e0944c98be5710ab6);
+        
+    
+        var popup_a49999b28c33a66e9ddcc0d6962d7128 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4a4a5ad87f70d5a22c497d59d9dcdc7d = $(`<div id="html_4a4a5ad87f70d5a22c497d59d9dcdc7d" style="width: 100.0%; height: 100.0%;"><b>Johnsen, Jeff & Allyson</b><br>1016 Panda Rd Venice FL 34293 </div>`)[0];
+                popup_a49999b28c33a66e9ddcc0d6962d7128.setContent(html_4a4a5ad87f70d5a22c497d59d9dcdc7d);
+            
+        
+
+        circle_marker_ae5552c4c4dd0b8d603fc6805ef3d977.bindPopup(popup_a49999b28c33a66e9ddcc0d6962d7128)
+        ;
+
+        
+    
+    
+            var circle_marker_1c98203283df204a8580ee3a41c6dfa3 = L.circleMarker(
+                [27.0342296, -82.4094906],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff7f0e", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_a13925d26abf054e0944c98be5710ab6);
+        
+    
+        var popup_748946e4722ac249760fa0c7319ec87b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5d419dd33656f640110143612f115299 = $(`<div id="html_5d419dd33656f640110143612f115299" style="width: 100.0%; height: 100.0%;"><b>Lindenmuth, Dane Tyler Alalaatoa Tolsea</b><br>755 Colgate Rd Venice FL 34293-6412 </div>`)[0];
+                popup_748946e4722ac249760fa0c7319ec87b.setContent(html_5d419dd33656f640110143612f115299);
+            
+        
+
+        circle_marker_1c98203283df204a8580ee3a41c6dfa3.bindPopup(popup_748946e4722ac249760fa0c7319ec87b)
+        ;
+
+        
+    
+    
+            var circle_marker_4dbf9622ff59b522ff2f5cb78f0e140d = L.circleMarker(
+                [27.0235569, -82.3984108],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff7f0e", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_a13925d26abf054e0944c98be5710ab6);
+        
+    
+        var popup_cf63fc09954be06a481102996d3662ba = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_33dd5ad452b2d404c353cf732d8e23cd = $(`<div id="html_33dd5ad452b2d404c353cf732d8e23cd" style="width: 100.0%; height: 100.0%;"><b>Loomis, Martin Wisner</b><br>5872 Denison Dr Venice FL 34293-6802 </div>`)[0];
+                popup_cf63fc09954be06a481102996d3662ba.setContent(html_33dd5ad452b2d404c353cf732d8e23cd);
+            
+        
+
+        circle_marker_4dbf9622ff59b522ff2f5cb78f0e140d.bindPopup(popup_cf63fc09954be06a481102996d3662ba)
+        ;
+
+        
+    
+    
+            var circle_marker_499c705a96e13421f635425847c44b1f = L.circleMarker(
+                [27.0262257, -82.4108131],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff7f0e", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_a13925d26abf054e0944c98be5710ab6);
+        
+    
+        var popup_821145542bce27ab198db0a4cdc26733 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_111de3e025ebf64c0cb6b0295f7f9e30 = $(`<div id="html_111de3e025ebf64c0cb6b0295f7f9e30" style="width: 100.0%; height: 100.0%;"><b>McMullen, David & Stephanie Lynn</b><br>5915 Regent Rd Venice FL 34293 </div>`)[0];
+                popup_821145542bce27ab198db0a4cdc26733.setContent(html_111de3e025ebf64c0cb6b0295f7f9e30);
+            
+        
+
+        circle_marker_499c705a96e13421f635425847c44b1f.bindPopup(popup_821145542bce27ab198db0a4cdc26733)
+        ;
+
+        
+    
+    
+            var circle_marker_100d83d281a6caf5e1169dede2edcde2 = L.circleMarker(
+                [27.0171115, -82.4013355],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff7f0e", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_a13925d26abf054e0944c98be5710ab6);
+        
+    
+        var popup_2f4f4995d9638b5a434a447a3de69303 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_347c8542ced74065d472e619d5c1148a = $(`<div id="html_347c8542ced74065d472e619d5c1148a" style="width: 100.0%; height: 100.0%;"><b>Merrill, William</b><br>1712 Fossil Dr Englewood FL 34223-6227 </div>`)[0];
+                popup_2f4f4995d9638b5a434a447a3de69303.setContent(html_347c8542ced74065d472e619d5c1148a);
+            
+        
+
+        circle_marker_100d83d281a6caf5e1169dede2edcde2.bindPopup(popup_2f4f4995d9638b5a434a447a3de69303)
+        ;
+
+        
+    
+    
+            var circle_marker_f91b463a5d496214e3ef871fb0e0bb41 = L.circleMarker(
+                [27.0264948, -82.4038475],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff7f0e", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_a13925d26abf054e0944c98be5710ab6);
+        
+    
+        var popup_9004f1bb75c29e46f0a20bc6f2d31fbc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1a8079c0aa6b58e02415e6f4f94fab4b = $(`<div id="html_1a8079c0aa6b58e02415e6f4f94fab4b" style="width: 100.0%; height: 100.0%;"><b>Page, Jane</b><br>5740 Teahouse Venice FL 34293 </div>`)[0];
+                popup_9004f1bb75c29e46f0a20bc6f2d31fbc.setContent(html_1a8079c0aa6b58e02415e6f4f94fab4b);
+            
+        
+
+        circle_marker_f91b463a5d496214e3ef871fb0e0bb41.bindPopup(popup_9004f1bb75c29e46f0a20bc6f2d31fbc)
+        ;
+
+        
+    
+</script>
+</html>

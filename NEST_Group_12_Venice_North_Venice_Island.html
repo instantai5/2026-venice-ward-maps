@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_1b757abb80e144f6514964bcd31d928f {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+    <div style="
+        position: fixed;
+        top: 12px;
+        left: 12px;
+        z-index: 9999;
+        background: white;
+        border: 2px solid #ff7f0e;
+        padding: 10px 12px;
+        font-size: 14px;
+        line-height: 1.35;
+        box-shadow: 2px 2px 6px rgba(0,0,0,0.25);
+        max-width: 320px;
+    ">
+        <div style="font-weight: bold; margin-bottom: 4px;">Group 12: Venice North - Venice Island</div>
+        <div>Leader: Lawrence Kosmuch</div>
+        <div>Households: 10</div>
+        <div style="margin-top: 8px;"><a href="index.html">Back to Main Map</a></div>
+    </div>
+    
+    
+            <div class="folium-map" id="map_1b757abb80e144f6514964bcd31d928f" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_1b757abb80e144f6514964bcd31d928f = L.map(
+                "map_1b757abb80e144f6514964bcd31d928f",
+                {
+                    center: [27.09006215, -82.44270381999998],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 15,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_31ec96ab8eca523e74cf8bc5eb88776a = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_31ec96ab8eca523e74cf8bc5eb88776a.addTo(map_1b757abb80e144f6514964bcd31d928f);
+        
+    
+        function geo_json_aff3a8a162237988a20a56a85f895a0a_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "black", "fillColor": "#ff7f0e", "fillOpacity": 0.3, "weight": 1.8};
+            }
+        }
+
+        function geo_json_aff3a8a162237988a20a56a85f895a0a_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_aff3a8a162237988a20a56a85f895a0a = L.geoJson(null, {
+                onEachFeature: geo_json_aff3a8a162237988a20a56a85f895a0a_onEachFeature,
+            
+                style: geo_json_aff3a8a162237988a20a56a85f895a0a_styler,
+            ...{
+}
+        });
+
+        function geo_json_aff3a8a162237988a20a56a85f895a0a_add (data) {
+            geo_json_aff3a8a162237988a20a56a85f895a0a
+                .addData(data);
+        }
+            geo_json_aff3a8a162237988a20a56a85f895a0a_add({"features": [{"geometry": {"coordinates": [[[-82.4381405, 27.0793777], [-82.4557774, 27.0889106], [-82.4615527999999, 27.1040037], [-82.4228603, 27.0909895], [-82.4247163, 27.088756], [-82.4381405, 27.0793777]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_aff3a8a162237988a20a56a85f895a0a.bindTooltip(
+                `<div>
+                     Group 12: Venice North - Venice Island
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_aff3a8a162237988a20a56a85f895a0a.addTo(map_1b757abb80e144f6514964bcd31d928f);
+        
+    
+            var circle_marker_f7ca05d7e6a74038ff1a1a6c01cf5131 = L.circleMarker(
+                [27.088756, -82.4247163],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff7f0e", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_1b757abb80e144f6514964bcd31d928f);
+        
+    
+        var popup_a401e26afb3266f9ce5b2d45a10071b5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_278a4e841414c8d804955595cdf90685 = $(`<div id="html_278a4e841414c8d804955595cdf90685" style="width: 100.0%; height: 100.0%;"><b>Bergman, Annette</b><br>510 Roma Rd Venice FL 34285-4317 </div>`)[0];
+                popup_a401e26afb3266f9ce5b2d45a10071b5.setContent(html_278a4e841414c8d804955595cdf90685);
+            
+        
+
+        circle_marker_f7ca05d7e6a74038ff1a1a6c01cf5131.bindPopup(popup_a401e26afb3266f9ce5b2d45a10071b5)
+        ;
+
+        
+    
+    
+            var circle_marker_f427a27c1b31acb894bc4602d0065a20 = L.circleMarker(
+                [27.0868914, -82.4419927],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff7f0e", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_1b757abb80e144f6514964bcd31d928f);
+        
+    
+        var popup_e6b0aed50423082f5a969ef0328352e0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f767a07975c3f46e0122413fbf7ec17e = $(`<div id="html_f767a07975c3f46e0122413fbf7ec17e" style="width: 100.0%; height: 100.0%;"><b>Brower, Richard</b><br>708 Tamiami Trl S Apt 119 Venice FL 34285-3615 </div>`)[0];
+                popup_e6b0aed50423082f5a969ef0328352e0.setContent(html_f767a07975c3f46e0122413fbf7ec17e);
+            
+        
+
+        circle_marker_f427a27c1b31acb894bc4602d0065a20.bindPopup(popup_e6b0aed50423082f5a969ef0328352e0)
+        ;
+
+        
+    
+    
+            var circle_marker_d5e8c351dc3483b1a7567b265cffd1fd = L.circleMarker(
+                [27.0850666, -82.4469862999999],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff7f0e", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_1b757abb80e144f6514964bcd31d928f);
+        
+    
+        var popup_faca6e4166f8b713c4b164e5ff39239e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d7dcf52e696c1a687590904e2ad12dc5 = $(`<div id="html_d7dcf52e696c1a687590904e2ad12dc5" style="width: 100.0%; height: 100.0%;"><b>Bullen, Larry & Karen</b><br>840 Riviera St Venice FL 34285-3430 </div>`)[0];
+                popup_faca6e4166f8b713c4b164e5ff39239e.setContent(html_d7dcf52e696c1a687590904e2ad12dc5);
+            
+        
+
+        circle_marker_d5e8c351dc3483b1a7567b265cffd1fd.bindPopup(popup_faca6e4166f8b713c4b164e5ff39239e)
+        ;
+
+        
+    
+    
+            var circle_marker_c502ca5b5dbd55a43823c25c444f48d3 = L.circleMarker(
+                [27.1040037, -82.4615527999999],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff7f0e", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_1b757abb80e144f6514964bcd31d928f);
+        
+    
+        var popup_4732548cd4ea8e55dd0c37f4beecdeb4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9f9df9d8638d446dc10d28b16b1a4c41 = $(`<div id="html_9f9df9d8638d446dc10d28b16b1a4c41" style="width: 100.0%; height: 100.0%;"><b>Clover, Robert W. & Betty</b><br>811 The Esplanade North Apt 804 Venice FL 34285 </div>`)[0];
+                popup_4732548cd4ea8e55dd0c37f4beecdeb4.setContent(html_9f9df9d8638d446dc10d28b16b1a4c41);
+            
+        
+
+        circle_marker_c502ca5b5dbd55a43823c25c444f48d3.bindPopup(popup_4732548cd4ea8e55dd0c37f4beecdeb4)
+        ;
+
+        
+    
+    
+            var circle_marker_4b40ae823c0e5378efb33024cfac5229 = L.circleMarker(
+                [27.0909895, -82.4228603],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff7f0e", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_1b757abb80e144f6514964bcd31d928f);
+        
+    
+        var popup_541b9cb6cbf8806332c759b18519e81a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_88f1d94835c8199d69fabdcd6f3e8e7e = $(`<div id="html_88f1d94835c8199d69fabdcd6f3e8e7e" style="width: 100.0%; height: 100.0%;"><b>Dowd, Dean & Betty</b><br>984 Jolanda Cir Venice FL 34285-4448 </div>`)[0];
+                popup_541b9cb6cbf8806332c759b18519e81a.setContent(html_88f1d94835c8199d69fabdcd6f3e8e7e);
+            
+        
+
+        circle_marker_4b40ae823c0e5378efb33024cfac5229.bindPopup(popup_541b9cb6cbf8806332c759b18519e81a)
+        ;
+
+        
+    
+    
+            var circle_marker_dac655232dafb1d277336356cf8a1d18 = L.circleMarker(
+                [27.1019791, -82.4605388],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff7f0e", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_1b757abb80e144f6514964bcd31d928f);
+        
+    
+        var popup_24c749ebbddb8759cb9254f7bf70f53f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3d9b24d51c8e400323835fa6f65d4e5a = $(`<div id="html_3d9b24d51c8e400323835fa6f65d4e5a" style="width: 100.0%; height: 100.0%;"><b>Johnson, Joe & Kathy</b><br>333 The Esplanade N Venice FL 34285-1548 </div>`)[0];
+                popup_24c749ebbddb8759cb9254f7bf70f53f.setContent(html_3d9b24d51c8e400323835fa6f65d4e5a);
+            
+        
+
+        circle_marker_dac655232dafb1d277336356cf8a1d18.bindPopup(popup_24c749ebbddb8759cb9254f7bf70f53f)
+        ;
+
+        
+    
+    
+            var circle_marker_19192e35459708feb743a97af48697a6 = L.circleMarker(
+                [27.085092, -82.4315988],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff7f0e", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_1b757abb80e144f6514964bcd31d928f);
+        
+    
+        var popup_1879f6a2ec2bcb659b1ed6655909fcfd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0953eb48c816aafca8c3e4bd51a6fcf3 = $(`<div id="html_0953eb48c816aafca8c3e4bd51a6fcf3" style="width: 100.0%; height: 100.0%;"><b>Kosmuch, Lawrence</b><br>220 Rio Terra Venice FL 34285-2948 </div>`)[0];
+                popup_1879f6a2ec2bcb659b1ed6655909fcfd.setContent(html_0953eb48c816aafca8c3e4bd51a6fcf3);
+            
+        
+
+        circle_marker_19192e35459708feb743a97af48697a6.bindPopup(popup_1879f6a2ec2bcb659b1ed6655909fcfd)
+        ;
+
+        
+    
+    
+            var circle_marker_da44ba3f11ad586596224e337ba6d842 = L.circleMarker(
+                [27.0889106, -82.4557774],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff7f0e", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_1b757abb80e144f6514964bcd31d928f);
+        
+    
+        var popup_e865971d69b1e1eae38311785dde5a87 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_376ce8ad7bbc3a1915184a5270ad4cdd = $(`<div id="html_376ce8ad7bbc3a1915184a5270ad4cdd" style="width: 100.0%; height: 100.0%;"><b>Sands, Mercy Marie</b><br>908 Villas Dr Unit 68 Venice FL 34285-3053 </div>`)[0];
+                popup_e865971d69b1e1eae38311785dde5a87.setContent(html_376ce8ad7bbc3a1915184a5270ad4cdd);
+            
+        
+
+        circle_marker_da44ba3f11ad586596224e337ba6d842.bindPopup(popup_e865971d69b1e1eae38311785dde5a87)
+        ;
+
+        
+    
+    
+            var circle_marker_8d2d534579b4a898a8c2a2c5b6d6c354 = L.circleMarker(
+                [27.0895549, -82.4428743],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff7f0e", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_1b757abb80e144f6514964bcd31d928f);
+        
+    
+        var popup_cb289725db6791c4406dca169654db19 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_af3a506cd66b415abe3352eff1969004 = $(`<div id="html_af3a506cd66b415abe3352eff1969004" style="width: 100.0%; height: 100.0%;"><b>St.Hilaire, Shawn</b><br>620 Guild Dr Apt No. 3 Venice FL 34285-3205 </div>`)[0];
+                popup_cb289725db6791c4406dca169654db19.setContent(html_af3a506cd66b415abe3352eff1969004);
+            
+        
+
+        circle_marker_8d2d534579b4a898a8c2a2c5b6d6c354.bindPopup(popup_cb289725db6791c4406dca169654db19)
+        ;
+
+        
+    
+    
+            var circle_marker_f25ef88256051ecd46b1fae1fa80b6ab = L.circleMarker(
+                [27.0793777, -82.4381405],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff7f0e", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_1b757abb80e144f6514964bcd31d928f);
+        
+    
+        var popup_7c20387193ed74598edc3a3176f7770b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7deb9af27da545d40596b72a23e72232 = $(`<div id="html_7deb9af27da545d40596b72a23e72232" style="width: 100.0%; height: 100.0%;"><b>Starling, John Randolph</b><br>460 Base Ave E Apt 120 Venice FL 34285-4125 </div>`)[0];
+                popup_7c20387193ed74598edc3a3176f7770b.setContent(html_7deb9af27da545d40596b72a23e72232);
+            
+        
+
+        circle_marker_f25ef88256051ecd46b1fae1fa80b6ab.bindPopup(popup_7c20387193ed74598edc3a3176f7770b)
+        ;
+
+        
+    
+</script>
+</html>

@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_d99ba4945416242539ae058719a0c08c {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+    <div style="
+        position: fixed;
+        top: 12px;
+        left: 12px;
+        z-index: 9999;
+        background: white;
+        border: 2px solid #ff7f0e;
+        padding: 10px 12px;
+        font-size: 14px;
+        line-height: 1.35;
+        box-shadow: 2px 2px 6px rgba(0,0,0,0.25);
+        max-width: 320px;
+    ">
+        <div style="font-weight: bold; margin-bottom: 4px;">Group 2: Nokomis - North West</div>
+        <div>Leader: Troy Samuels</div>
+        <div>Households: 9</div>
+        <div style="margin-top: 8px;"><a href="index.html">Back to Main Map</a></div>
+    </div>
+    
+    
+            <div class="folium-map" id="map_d99ba4945416242539ae058719a0c08c" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_d99ba4945416242539ae058719a0c08c = L.map(
+                "map_d99ba4945416242539ae058719a0c08c",
+                {
+                    center: [27.160896655555558, -82.47607063333328],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 15,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_f36e8b82b062d7623a453d29cfb24e28 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_f36e8b82b062d7623a453d29cfb24e28.addTo(map_d99ba4945416242539ae058719a0c08c);
+        
+    
+        function geo_json_0521773fef34c548add9b12a089dabec_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "black", "fillColor": "#ff7f0e", "fillOpacity": 0.3, "weight": 1.8};
+            }
+        }
+
+        function geo_json_0521773fef34c548add9b12a089dabec_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_0521773fef34c548add9b12a089dabec = L.geoJson(null, {
+                onEachFeature: geo_json_0521773fef34c548add9b12a089dabec_onEachFeature,
+            
+                style: geo_json_0521773fef34c548add9b12a089dabec_styler,
+            ...{
+}
+        });
+
+        function geo_json_0521773fef34c548add9b12a089dabec_add (data) {
+            geo_json_0521773fef34c548add9b12a089dabec
+                .addData(data);
+        }
+            geo_json_0521773fef34c548add9b12a089dabec_add({"features": [{"geometry": {"coordinates": [[[-82.4680078999999, 27.1547144], [-82.4773278, 27.1582617], [-82.4886645999999, 27.1635024], [-82.4847956999999, 27.1652119], [-82.4695559, 27.1663119], [-82.4680078999999, 27.1547144]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_0521773fef34c548add9b12a089dabec.bindTooltip(
+                `<div>
+                     Group 2: Nokomis - North West
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_0521773fef34c548add9b12a089dabec.addTo(map_d99ba4945416242539ae058719a0c08c);
+        
+    
+            var circle_marker_e8006706134796df5af89b1f1c7bf0ac = L.circleMarker(
+                [27.1652119, -82.4847956999999],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff7f0e", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_d99ba4945416242539ae058719a0c08c);
+        
+    
+        var popup_fdef53a818696bf2a4c6142d4a387e1a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_448482d7cc3f6eccd891692b54a0ced5 = $(`<div id="html_448482d7cc3f6eccd891692b54a0ced5" style="width: 100.0%; height: 100.0%;"><b>Bond, Charles Richard</b><br>511 Velasquez Drive Osprey FL 34229 </div>`)[0];
+                popup_fdef53a818696bf2a4c6142d4a387e1a.setContent(html_448482d7cc3f6eccd891692b54a0ced5);
+            
+        
+
+        circle_marker_e8006706134796df5af89b1f1c7bf0ac.bindPopup(popup_fdef53a818696bf2a4c6142d4a387e1a)
+        ;
+
+        
+    
+    
+            var circle_marker_cc4ac7ccc718224dfdc6578593040d42 = L.circleMarker(
+                [27.1663119, -82.4695559],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff7f0e", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_d99ba4945416242539ae058719a0c08c);
+        
+    
+        var popup_adc1704ab246143eeb13319bd55aff0f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_841913cf582c06c87e781ad14d42ee1b = $(`<div id="html_841913cf582c06c87e781ad14d42ee1b" style="width: 100.0%; height: 100.0%;"><b>Fulford, Karen</b><br>617 Miro Cir Nokomis FL 34275-4231 </div>`)[0];
+                popup_adc1704ab246143eeb13319bd55aff0f.setContent(html_841913cf582c06c87e781ad14d42ee1b);
+            
+        
+
+        circle_marker_cc4ac7ccc718224dfdc6578593040d42.bindPopup(popup_adc1704ab246143eeb13319bd55aff0f)
+        ;
+
+        
+    
+    
+            var circle_marker_8c3e0785844ada58bb7b2cbbf65aab89 = L.circleMarker(
+                [27.1577973, -82.4733882],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff7f0e", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_d99ba4945416242539ae058719a0c08c);
+        
+    
+        var popup_69036c8e5b0fca59ac37b08b306c9345 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cda8a0f567e92496acf8759eddc91c5b = $(`<div id="html_cda8a0f567e92496acf8759eddc91c5b" style="width: 100.0%; height: 100.0%;"><b>Gates, Brian John & Deborah Allen</b><br>400 Tortuga Drive Nokomis FL 34275 </div>`)[0];
+                popup_69036c8e5b0fca59ac37b08b306c9345.setContent(html_cda8a0f567e92496acf8759eddc91c5b);
+            
+        
+
+        circle_marker_8c3e0785844ada58bb7b2cbbf65aab89.bindPopup(popup_69036c8e5b0fca59ac37b08b306c9345)
+        ;
+
+        
+    
+    
+            var circle_marker_034615a5956e9ec0cfa2cdaa805650c9 = L.circleMarker(
+                [27.1599135, -82.4799721999999],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff7f0e", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_d99ba4945416242539ae058719a0c08c);
+        
+    
+        var popup_96f9cff7be8476ad80771afd8186fcd3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3752f43915757b9fefa15d13fa0517d2 = $(`<div id="html_3752f43915757b9fefa15d13fa0517d2" style="width: 100.0%; height: 100.0%;"><b>Patricoski, Christopher Thomas & Keiki</b><br>2601 Bayshore Rd Nokomis FL 34275-3409 </div>`)[0];
+                popup_96f9cff7be8476ad80771afd8186fcd3.setContent(html_3752f43915757b9fefa15d13fa0517d2);
+            
+        
+
+        circle_marker_034615a5956e9ec0cfa2cdaa805650c9.bindPopup(popup_96f9cff7be8476ad80771afd8186fcd3)
+        ;
+
+        
+    
+    
+            var circle_marker_190ca4bd3b97a467d39236014f68f24c = L.circleMarker(
+                [27.1645191, -82.4735146],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff7f0e", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_d99ba4945416242539ae058719a0c08c);
+        
+    
+        var popup_9c354efccc107cd32870c794821e66e2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0194cd4713785ac13e289d7915b2fcdb = $(`<div id="html_0194cd4713785ac13e289d7915b2fcdb" style="width: 100.0%; height: 100.0%;"><b>Resendiz, Jorge Jesus</b><br>125 1st Ave Nokomis FL 34275-4242 </div>`)[0];
+                popup_9c354efccc107cd32870c794821e66e2.setContent(html_0194cd4713785ac13e289d7915b2fcdb);
+            
+        
+
+        circle_marker_190ca4bd3b97a467d39236014f68f24c.bindPopup(popup_9c354efccc107cd32870c794821e66e2)
+        ;
+
+        
+    
+    
+            var circle_marker_ae9b99d103975c0f8ce8c14727582798 = L.circleMarker(
+                [27.1582617, -82.4773278],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff7f0e", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_d99ba4945416242539ae058719a0c08c);
+        
+    
+        var popup_c6a5e0b822a7bea581cd57bcdc7dd9c0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8b286f7c089d097c9fd73af8e6c746b8 = $(`<div id="html_8b286f7c089d097c9fd73af8e6c746b8" style="width: 100.0%; height: 100.0%;"><b>Schatzberg, Joyce Ann</b><br>608 Indiana Ave Nokomis FL 34275-3430 </div>`)[0];
+                popup_c6a5e0b822a7bea581cd57bcdc7dd9c0.setContent(html_8b286f7c089d097c9fd73af8e6c746b8);
+            
+        
+
+        circle_marker_ae9b99d103975c0f8ce8c14727582798.bindPopup(popup_c6a5e0b822a7bea581cd57bcdc7dd9c0)
+        ;
+
+        
+    
+    
+            var circle_marker_6452cd5a1a075229f47615db17717667 = L.circleMarker(
+                [27.1635024, -82.4886645999999],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff7f0e", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_d99ba4945416242539ae058719a0c08c);
+        
+    
+        var popup_727e5e4c540728d406d8ac0edf41a070 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_03c7ff07228a037d03e617314d4b8aa2 = $(`<div id="html_03c7ff07228a037d03e617314d4b8aa2" style="width: 100.0%; height: 100.0%;"><b>Schumacher, James</b><br>2804 Casey Key Rd Nokomis FL 34275-3323 </div>`)[0];
+                popup_727e5e4c540728d406d8ac0edf41a070.setContent(html_03c7ff07228a037d03e617314d4b8aa2);
+            
+        
+
+        circle_marker_6452cd5a1a075229f47615db17717667.bindPopup(popup_727e5e4c540728d406d8ac0edf41a070)
+        ;
+
+        
+    
+    
+            var circle_marker_2b5d1e547fdb66efa140f78f5f61d0c6 = L.circleMarker(
+                [27.1578377, -82.4694088],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff7f0e", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_d99ba4945416242539ae058719a0c08c);
+        
+    
+        var popup_d9e2d316db0c69e5cc03cb39cc075ab2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dca9a3c626eebc9a10317e8b1e76cb08 = $(`<div id="html_dca9a3c626eebc9a10317e8b1e76cb08" style="width: 100.0%; height: 100.0%;"><b>Todd, Paul Edward</b><br>224 Monet Dr Nokomis FL 34275-1355 </div>`)[0];
+                popup_d9e2d316db0c69e5cc03cb39cc075ab2.setContent(html_dca9a3c626eebc9a10317e8b1e76cb08);
+            
+        
+
+        circle_marker_2b5d1e547fdb66efa140f78f5f61d0c6.bindPopup(popup_d9e2d316db0c69e5cc03cb39cc075ab2)
+        ;
+
+        
+    
+    
+            var circle_marker_b3db76b261ba7c6ed07b86e563378fb8 = L.circleMarker(
+                [27.1547144, -82.4680078999999],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff7f0e", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_d99ba4945416242539ae058719a0c08c);
+        
+    
+        var popup_f2ac4819534fd1e3ea4d7056d5a22ba5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_27b6c5f3105bcc92cf4fbf12404c9326 = $(`<div id="html_27b6c5f3105bcc92cf4fbf12404c9326" style="width: 100.0%; height: 100.0%;"><b>Wright, Joshua</b><br>200 East Palm Avenue Nokomis FL 34275 </div>`)[0];
+                popup_f2ac4819534fd1e3ea4d7056d5a22ba5.setContent(html_27b6c5f3105bcc92cf4fbf12404c9326);
+            
+        
+
+        circle_marker_b3db76b261ba7c6ed07b86e563378fb8.bindPopup(popup_f2ac4819534fd1e3ea4d7056d5a22ba5)
+        ;
+
+        
+    
+</script>
+</html>
